@@ -30,9 +30,6 @@ jobs:
           command: npm run coverage -- --ci --runInBand --reporters=default --reporters=jest-junit
           environment:
             JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
-      - run:
-          name: eslint
-          command: npm run ls
       - store_test_results:
           path: reports/junit
       - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/

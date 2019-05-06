@@ -20,6 +20,7 @@
     "eslint-plugin-react": "^7.9.1",
     "jest": "^22.0.4",
     "jest-environment-jsdom-global": "^1.0.2",
+    "jest-junit": "^6.4.0",
     "lerna": "^2.11.0",
     "ramda": "^0.26.1",
     "react": "16.8.4",
@@ -63,7 +64,5 @@
     },
     "testURL": "http://localhost/"
   },
-  "dependencies": {
-    "jest-junit": "^6.4.0"
-  }
+  "dependencies": {}
 }

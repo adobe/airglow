@@ -11,11 +11,11 @@ governing permissions and limitations under the License.
 */
 
 import Airglow from './airglow';
-import { BootstrapProvider, BootstrapWrapper } from './bootstrap.context';
+import { AirglowProvider, AirglowWrapper } from './airglow.context';
 
 export default Airglow;
 export * from './types';
 
-export { BootstrapWrapper, BootstrapProvider };
+export { AirglowProvider, AirglowWrapper };
 
 export * from './util/test.util';

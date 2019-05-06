@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 import React from 'react';
 import { connect } from 'react-redux';
 import { initialize, slice } from '@airglow/reducers';
-import { renderAirglow, BootstrapWrapper } from 'airglow';
+import { renderAirglow, AirglowWrapper } from 'airglow';
 import ReduxStore from '../../src';
 
 let tree;
@@ -34,11 +34,11 @@ const bootstrapConfig = {
 describe('Redux BootstrapIntegrationTest', () => {
   beforeEach(() => {
     tree = renderAirglow(
-      <BootstrapWrapper
+      <AirglowWrapper
         config={bootstrapConfig}
       >
         <TestConnected />
-      </BootstrapWrapper>,
+      </AirglowWrapper>,
       ReduxStore,
       []
     );

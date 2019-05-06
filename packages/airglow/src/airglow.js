@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 import * as R from 'ramda';
 import React from 'react';
-import { BootstrapProvider } from './bootstrap.context';
+import { AirglowProvider } from './airglow.context';
 import Engine from './engine';
 import { COMPONENT, HOC } from './types';
 
@@ -34,7 +34,7 @@ class Airglow extends React.Component {
   }
 
   render() {
-    const Renderer = this.props.renderer || BootstrapProvider;
+    const Renderer = this.props.renderer || AirglowProvider;
     return (
       <Renderer
         value={{ bootstrap: (...args) => this.engine.bootstrapModule(...args) }}

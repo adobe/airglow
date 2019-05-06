@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 import React from 'react';
 import { mount } from 'enzyme';
 import Airglow, {
-  BOOTSTRAP_MODULE, BOOTSTRAP_PLUGIN, BootstrapWrapper
+  BOOTSTRAP_MODULE, BOOTSTRAP_PLUGIN, AirglowWrapper
 } from '../../src';
 
 let diamonds;
@@ -39,11 +39,11 @@ describe('Airglow BootstrapIntegrationTest', () => {
       <Airglow
         plugins={[plugin]}
       >
-        <BootstrapWrapper
+        <AirglowWrapper
           config={bootstrapConfig}
         >
           <div>Test</div>
-        </BootstrapWrapper>
+        </AirglowWrapper>
       </Airglow>
     );
   });

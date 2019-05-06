@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prefab selector should properly pass the values into the selector 1`] = `
+Object {
+  "dispatch": "Dispatch!",
+  "globalState": Object {
+    "prefab": Object {
+      "crayonForm": Object {
+        "construct": Object {
+          "fields": "config fields",
+        },
+        "store": Object {
+          "fields": "store fields",
+        },
+      },
+    },
+  },
+  "options": "selector options!",
+  "props": undefined,
+  "state": Object {
+    "construct": Object {
+      "fields": "config fields",
+    },
+    "store": Object {
+      "fields": "store fields",
+    },
+  },
+}
+`;
+
+exports[`prefab selector should return the results of the selector 1`] = `
+Object {
+  "data": "results!",
+}
+`;

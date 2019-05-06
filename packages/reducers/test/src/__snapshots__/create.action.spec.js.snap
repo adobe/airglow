@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addFunctionProp creates an action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": undefined,
+  "type": "MY_ACTION",
+}
+`;
+
+exports[`addFunctionProp passes in properties 1`] = `
+Object {
+  "meta": undefined,
+  "payload": Object {
+    "a": "b",
+  },
+  "type": "MY_ACTION",
+}
+`;
+
+exports[`addFunctionProp uses a provided metdata mapper 1`] = `
+Object {
+  "meta": Object {
+    "a": 7,
+    "b": 23,
+  },
+  "payload": 7,
+  "type": "MY_ACTION",
+}
+`;
+
+exports[`addFunctionProp uses a provided payload mapper 1`] = `
+Object {
+  "meta": undefined,
+  "payload": Object {
+    "a": 7,
+    "b": 23,
+  },
+  "type": "MY_ACTION",
+}
+`;

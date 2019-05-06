@@ -1,0 +1,38 @@
+{
+  "name": "@airglow/plugin-devtools",
+  "description": "A react module loader.",
+  "version": "0.7.2",
+  "author": "Adobe Systems",
+  "license": "Apache-2.0",
+  "files": [
+    "dist/"
+  ],
+  "publishConfig": {
+    "registry": "https://artifactory.corp.adobe.com/artifactory/api/npm/npm-nubula-release"
+  },
+  "dependencies": {
+    "airglow": "*",
+    "redux-devtools": "^3.4.0",
+    "redux-devtools-dock-monitor": "^1.1.2",
+    "redux-devtools-log-monitor": "^1.3.0"
+  },
+  "devDependencies": {
+    "@airglow/store-redux": "*",
+    "babel-cli": "^6.10.1",
+    "jest": "^22.0.4"
+  },
+  "resolutions": {
+    "redux-devtools-log-monitor/react-json-tree": "0.11.0"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel src --out-dir dist",
+    "test": "jest",
+    "test:approve": "npm run test -- --updateSnapshot",
+    "test:watch": "npm run test -- --watch"
+  },
+  "main": "dist/index.js",
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>../../test.setup.js"
+  }
+}

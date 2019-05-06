@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Airglow Redux Store should merge array results together 1`] = `
+Array [
+  "completeReducer",
+  "arrayReducer1",
+  "arrayReducer2",
+]
+`;
+
+exports[`Airglow Redux Store should use all the reducer plugins 1`] = `
+Array [
+  "completeReducer",
+]
+`;

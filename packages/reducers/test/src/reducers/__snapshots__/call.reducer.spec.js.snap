@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CallReducer should pass the state and action to the validators 1`] = `
+Array [
+  Object {
+    "pizza": "sausage",
+  },
+  Object {
+    "type": "changePizza",
+  },
+]
+`;
+
+exports[`CallReducer should provide the config for others to use 1`] = `
+Object {
+  "fors": Array [
+    "changePizza",
+  ],
+  "reducers": Array [
+    [Function],
+  ],
+}
+`;
+
+exports[`CallReducer should provide the reducer with the state and action 1`] = `
+Array [
+  Object {
+    "pizza": "sausage",
+  },
+  Object {
+    "type": "changePizza",
+  },
+  Object {
+    "fullState": Object {
+      "food": Object {
+        "pizza": "sausage",
+      },
+    },
+    "reducers": Array [
+      [Function],
+    ],
+  },
+]
+`;
+
+exports[`CallReducer should return the results of the provided function 1`] = `
+Object {
+  "pizza": "cheese",
+}
+`;
+
+exports[`CallReducer should support multiple reducers 1`] = `
+Object {
+  "iceCream": "rocky road",
+  "pizza": "cheese",
+}
+`;

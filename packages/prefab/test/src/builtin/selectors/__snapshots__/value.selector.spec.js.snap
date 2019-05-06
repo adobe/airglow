@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`value.selector should return the reset action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": Object {
+    "construct": "pickleSearch",
+  },
+  "type": "PREFAB_VALUE_RESET",
+}
+`;
+
+exports[`value.selector should return the search action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": Object {
+    "construct": "pickleSearch",
+    "value": "zippy",
+  },
+  "type": "PREFAB_VALUE",
+}
+`;
+
+exports[`value.selector should trigger a reset action 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickleSearch",
+    },
+    "type": "PREFAB_VALUE_RESET",
+  },
+]
+`;
+
+exports[`value.selector should trigger a search action 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickleSearch",
+      "value": "bumpy",
+    },
+    "type": "PREFAB_VALUE",
+  },
+]
+`;

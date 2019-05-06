@@ -1,0 +1,36 @@
+{
+  "name": "@airglow/sample-todo-redux",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Adobe Systems",
+  "license": "Apache-2.0",
+  "keywords": [],
+  "main": "src/index.js",
+  "private": true,
+  "devDependencies": {
+    "airglow": "*",
+    "@airglow/plugin-devtools": "*",
+    "@airglow/plugin-prefab": "*",
+    "@airglow/store-redux": "*",
+    "@material-ui/core": "3.3.2",
+    "@material-ui/icons": "3.0.1",
+    "babel-eslint": "9.0.0",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
+    "react-redux": "^6.0.1",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build:sample": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

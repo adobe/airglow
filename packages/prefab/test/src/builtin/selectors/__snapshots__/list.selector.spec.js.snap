@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`list.selector returns the value if present 1`] = `
+Array [
+  "yellow",
+  "green",
+]
+`;
+
+exports[`list.selector should return the add action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": Object {
+    "construct": "colorList",
+    "value": "yellow",
+  },
+  "type": "PREFAB_LIST_ADD",
+}
+`;
+
+exports[`list.selector should return the remove action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": Object {
+    "construct": "colorList",
+    "value": "white",
+  },
+  "type": "PREFAB_LIST_REMOVE",
+}
+`;
+
+exports[`list.selector should return the remove at action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": Object {
+    "construct": "colorList",
+    "value": 2,
+  },
+  "type": "PREFAB_LIST_REMOVE_AT",
+}
+`;
+
+exports[`list.selector should return the set action 1`] = `
+Object {
+  "meta": undefined,
+  "payload": Object {
+    "construct": "colorList",
+    "value": "zippy",
+  },
+  "type": "PREFAB_LIST_SET",
+}
+`;
+
+exports[`list.selector should trigger a remove action 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "colorList",
+      "value": "yellow",
+    },
+    "type": "PREFAB_LIST_REMOVE",
+  },
+]
+`;
+
+exports[`list.selector should trigger a set action 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "colorList",
+      "value": Array [
+        "white",
+      ],
+    },
+    "type": "PREFAB_LIST_SET",
+  },
+]
+`;
+
+exports[`list.selector should trigger an add action 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "colorList",
+      "value": "green",
+    },
+    "type": "PREFAB_LIST_ADD",
+  },
+]
+`;
+
+exports[`list.selector uses the default value 1`] = `
+Array [
+  "red",
+  "black",
+]
+`;

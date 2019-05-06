@@ -1,0 +1,19 @@
+coverage
+dist
+node_modules
+test-reports.xml
+.DS_Store
+
+extension.json
+sandbox
+
+// logs
+*.log
+
+// package zips
+packages/**/*.zip
+
+integration_private.key
+.released-packages
+
+.idea

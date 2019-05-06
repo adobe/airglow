@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Redux Integration Test should call if a "when" validator matches 1`] = `
+Object {
+  "iceCream": Object {
+    "container": "cone",
+    "enabled": true,
+    "flavor": "vanilla",
+    "initializedTo": Object {
+      "container": "cone",
+      "enabled": false,
+      "flavor": "vanilla",
+      "toppings": Array [],
+    },
+    "toppings": Array [
+      "pineapple",
+    ],
+  },
+  "initializedTo": Object {
+    "mode": "pizza",
+  },
+  "mode": "iceCream",
+  "pizza": Object {
+    "crust": "regular",
+    "enabled": false,
+    "initializedTo": Object {
+      "crust": "regular",
+      "enabled": true,
+      "size": "medium",
+      "toppings": Array [],
+    },
+    "size": "medium",
+    "toppings": Array [],
+  },
+}
+`;
+
+exports[`Redux Integration Test should extract properly 1`] = `
+Object {
+  "iceCream": Object {
+    "container": "cone",
+    "enabled": false,
+    "flavor": "vanilla",
+    "initializedTo": Object {
+      "container": "cone",
+      "enabled": false,
+      "flavor": "vanilla",
+      "toppings": Array [],
+    },
+    "toppings": Array [],
+  },
+  "initializedTo": Object {
+    "mode": "pizza",
+  },
+  "mode": "pizza",
+  "pizza": Object {
+    "crust": "deep",
+    "enabled": true,
+    "initializedTo": Object {
+      "crust": "regular",
+      "enabled": true,
+      "size": "medium",
+      "toppings": Array [],
+    },
+    "size": "large",
+    "toppings": Array [
+      "sausage",
+      "peppers",
+    ],
+  },
+}
+`;
+
+exports[`Redux Integration Test should initilize correctly 1`] = `
+Object {
+  "iceCream": Object {
+    "container": "cone",
+    "enabled": false,
+    "flavor": "vanilla",
+    "initializedTo": Object {
+      "container": "cone",
+      "enabled": false,
+      "flavor": "vanilla",
+      "toppings": Array [],
+    },
+    "toppings": Array [],
+  },
+  "initializedTo": Object {
+    "mode": "pizza",
+  },
+  "mode": "pizza",
+  "pizza": Object {
+    "crust": "regular",
+    "enabled": true,
+    "initializedTo": Object {
+      "crust": "regular",
+      "enabled": true,
+      "size": "medium",
+      "toppings": Array [],
+    },
+    "size": "medium",
+    "toppings": Array [],
+  },
+}
+`;
+
+exports[`Redux Integration Test should reduce "to" values 1`] = `
+Object {
+  "iceCream": Object {
+    "container": "cone",
+    "enabled": true,
+    "flavor": "vanilla",
+    "initializedTo": Object {
+      "container": "cone",
+      "enabled": false,
+      "flavor": "vanilla",
+      "toppings": Array [],
+    },
+    "toppings": Array [],
+  },
+  "initializedTo": Object {
+    "mode": "pizza",
+  },
+  "mode": "iceCream",
+  "pizza": Object {
+    "crust": "regular",
+    "enabled": false,
+    "initializedTo": Object {
+      "crust": "regular",
+      "enabled": true,
+      "size": "medium",
+      "toppings": Array [],
+    },
+    "size": "medium",
+    "toppings": Array [],
+  },
+}
+`;
+
+exports[`Redux Integration Test should reset properly 1`] = `
+Object {
+  "iceCream": Object {
+    "container": "cone",
+    "enabled": false,
+    "flavor": "vanilla",
+    "initializedTo": Object {
+      "container": "cone",
+      "enabled": false,
+      "flavor": "vanilla",
+      "toppings": Array [],
+    },
+    "toppings": Array [],
+  },
+  "initializedTo": Object {
+    "mode": "pizza",
+  },
+  "mode": "pizza",
+  "pizza": Object {
+    "crust": "regular",
+    "enabled": true,
+    "initializedTo": Object {
+      "crust": "regular",
+      "enabled": true,
+      "size": "medium",
+      "toppings": Array [],
+    },
+    "size": "medium",
+    "toppings": Array [],
+  },
+}
+`;
+
+exports[`Redux Integration Test should toggle correctly 1`] = `
+Object {
+  "iceCream": Object {
+    "container": "cone",
+    "enabled": false,
+    "flavor": "vanilla",
+    "initializedTo": Object {
+      "container": "cone",
+      "enabled": false,
+      "flavor": "vanilla",
+      "toppings": Array [],
+    },
+    "toppings": Array [],
+  },
+  "initializedTo": Object {
+    "mode": "pizza",
+  },
+  "mode": "pizza",
+  "pizza": Object {
+    "crust": "regular",
+    "enabled": true,
+    "initializedTo": Object {
+      "crust": "regular",
+      "enabled": true,
+      "size": "medium",
+      "toppings": Array [],
+    },
+    "size": "medium",
+    "toppings": Array [],
+  },
+  "showCart": true,
+}
+`;

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`valueReducers should reset values properly 1`] = `
+Object {
+  "store": Object {
+    "value": "",
+  },
+}
+`;
+
+exports[`valueReducers should reset values properly with defaultValue 1`] = `
+Object {
+  "construct": Object {
+    "defaultValue": "crunchy",
+    "name": "pickleToggle",
+  },
+  "store": Object {
+    "value": "crunchy",
+  },
+}
+`;
+
+exports[`valueReducers update the value 1`] = `
+Object {
+  "store": Object {
+    "value": "soggy",
+  },
+}
+`;

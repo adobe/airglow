@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConstructReducer should call the reducer on the matching constructs 1`] = `
+Array [
+  Object {
+    "construct": Object {
+      "reduce": [Function],
+    },
+    "store": Object {},
+  },
+  Object {
+    "payload": Object {
+      "construct": "squid",
+    },
+    "type": "ACTION!",
+  },
+  Object {
+    "pass": "me",
+  },
+]
+`;
+
+exports[`ConstructReducer should properly build the state 1`] = `
+Object {
+  "squid": Object {
+    "construct": Object {
+      "reduce": [Function],
+    },
+    "store": Object {
+      "called": "ACTION!",
+      "count": 2,
+    },
+  },
+}
+`;
+
+exports[`ConstructReducer should return the state if there aint no reducer 1`] = `
+Object {
+  "squid": "happy",
+}
+`;

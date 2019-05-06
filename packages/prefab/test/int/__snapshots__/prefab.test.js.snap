@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrefabIntegrationTest should correclty set up the store 1`] = `
+Object {
+  "prefab": Object {
+    "counterA": Object {
+      "construct": Object {
+        "default": 21,
+        "name": "counterA",
+        "reduce": [Function],
+      },
+      "store": Object {},
+    },
+    "counterB": Object {
+      "construct": Object {
+        "name": "counterB",
+        "reduce": [Function],
+      },
+      "store": Object {},
+    },
+  },
+}
+`;

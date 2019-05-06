@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InitializeReducer passes the initialized values if no state 1`] = `
+Array [
+  Object {
+    "initializedTo": Object {
+      "pizza": "pepperoni",
+    },
+    "pizza": "pepperoni",
+  },
+  Object {
+    "type": "test",
+  },
+]
+`;
+
+exports[`InitializeReducer passes the state if it exists 1`] = `
+Array [
+  Object {
+    "pizza": "sausage",
+  },
+  Object {
+    "type": "test",
+  },
+]
+`;

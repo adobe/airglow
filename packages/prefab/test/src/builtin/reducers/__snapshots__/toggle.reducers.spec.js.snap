@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toggleReducers should set open to false  1`] = `
+Object {
+  "store": Object {
+    "open": false,
+  },
+}
+`;
+
+exports[`toggleReducers should set open to true  1`] = `
+Object {
+  "store": Object {
+    "open": true,
+  },
+}
+`;
+
+exports[`toggleReducers should toggle open to false  1`] = `
+Object {
+  "store": Object {
+    "open": false,
+  },
+}
+`;
+
+exports[`toggleReducers should toggle open to true  1`] = `
+Object {
+  "store": Object {
+    "open": true,
+  },
+}
+`;
+
+exports[`toggleReducers should use the default value if none is present 1`] = `
+Object {
+  "construct": Object {
+    "defaultValue": true,
+  },
+  "store": Object {
+    "open": false,
+  },
+}
+`;

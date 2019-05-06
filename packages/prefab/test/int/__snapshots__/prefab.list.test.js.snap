@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prefab ListIntegration should correctly add values 1`] = `
+Array [
+  "red",
+  "green",
+]
+`;
+
+exports[`Prefab ListIntegration should correctly remove values 1`] = `
+Array [
+  "purple",
+]
+`;
+
+exports[`Prefab ListIntegration should correctly remove values at index 1`] = `
+Array [
+  "pink",
+  "purple",
+  "green",
+]
+`;
+
+exports[`Prefab ListIntegration should correctly select the initial values 1`] = `Array []`;
+
+exports[`Prefab ListIntegration should correctly select the initial values 2`] = `
+Array [
+  "red",
+]
+`;
+
+exports[`Prefab ListIntegration should correctly update the value 1`] = `
+Array [
+  "yellow",
+]
+`;

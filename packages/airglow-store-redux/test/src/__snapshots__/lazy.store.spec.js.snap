@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LazyStore wont fail without reducers 1`] = `
+Object {
+  "dispatch": [Function],
+  "getState": [Function],
+  "injectReducers": [Function],
+  "replaceReducer": [Function],
+  "subscribe": [Function],
+  Symbol(observable): [Function],
+}
+`;

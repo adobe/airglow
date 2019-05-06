@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SliceReducer should not change the inbound state 1`] = `
+Object {
+  "pizza": "cheese",
+}
+`;
+
+exports[`SliceReducer should pass the original state in as well 1`] = `
+Object {
+  "fullState": Object {
+    "pizza": "cheese",
+  },
+}
+`;
+
+exports[`SliceReducer should set the correct piece of state 1`] = `
+Object {
+  "pizza": "pepperoni",
+}
+`;

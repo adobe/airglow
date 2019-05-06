@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toggle.selector should trigger a toggle action 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickleToggle",
+    },
+    "type": "PREFAB_TOGGLE_SWITCH",
+  },
+]
+`;
+
+exports[`toggle.selector should trigger a turnOff action 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickleToggle",
+    },
+    "type": "PREFAB_TOGGLE_OFF",
+  },
+]
+`;
+
+exports[`toggle.selector should trigger a turnOn action 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickleToggle",
+    },
+    "type": "PREFAB_TOGGLE_ON",
+  },
+]
+`;
+
+exports[`toggle.selector works with hide 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickleToggle",
+    },
+    "type": "PREFAB_TOGGLE_OFF",
+  },
+]
+`;
+
+exports[`toggle.selector works with set 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickleToggle",
+    },
+    "type": "PREFAB_TOGGLE_ON",
+  },
+]
+`;
+
+exports[`toggle.selector works with show 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickleToggle",
+    },
+    "type": "PREFAB_TOGGLE_ON",
+  },
+]
+`;
+
+exports[`toggle.selector works with turn off 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickleToggle",
+    },
+    "type": "PREFAB_TOGGLE_OFF",
+  },
+]
+`;
+
+exports[`toggle.selector works with turn on 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickleToggle",
+    },
+    "type": "PREFAB_TOGGLE_ON",
+  },
+]
+`;
+
+exports[`toggle.selector works with unset 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickleToggle",
+    },
+    "type": "PREFAB_TOGGLE_OFF",
+  },
+]
+`;

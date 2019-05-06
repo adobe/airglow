@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prefabToggle should return a selector 1`] = `
+Object {
+  "closeAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_OFF",
+  },
+  "defaultValue": false,
+  "doClose": [Function],
+  "doHide": [Function],
+  "doOpen": [Function],
+  "doSet": [Function],
+  "doShow": [Function],
+  "doToggle": [Function],
+  "doTurnOff": [Function],
+  "doTurnOn": [Function],
+  "doUnset": [Function],
+  "hideAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_OFF",
+  },
+  "isClosed": [Function],
+  "isHidden": [Function],
+  "isNotSet": [Function],
+  "isOff": [Function],
+  "isOn": [Function],
+  "isOpen": [Function],
+  "isSet": [Function],
+  "isVisible": [Function],
+  "openAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_ON",
+  },
+  "reduce": [Function],
+  "setAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_ON",
+  },
+  "showAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_ON",
+  },
+  "toggleAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_SWITCH",
+  },
+  "toggleName": "pickle",
+  "turnOffAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_OFF",
+  },
+  "turnOnAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_ON",
+  },
+  "unsetAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_OFF",
+  },
+}
+`;
+
+exports[`prefabToggle should set the defaultValue if provided 1`] = `
+Object {
+  "closeAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_OFF",
+  },
+  "defaultValue": true,
+  "doClose": [Function],
+  "doHide": [Function],
+  "doOpen": [Function],
+  "doSet": [Function],
+  "doShow": [Function],
+  "doToggle": [Function],
+  "doTurnOff": [Function],
+  "doTurnOn": [Function],
+  "doUnset": [Function],
+  "hideAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_OFF",
+  },
+  "isClosed": [Function],
+  "isHidden": [Function],
+  "isNotSet": [Function],
+  "isOff": [Function],
+  "isOn": [Function],
+  "isOpen": [Function],
+  "isSet": [Function],
+  "isVisible": [Function],
+  "openAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_ON",
+  },
+  "reduce": [Function],
+  "setAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_ON",
+  },
+  "showAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_ON",
+  },
+  "toggleAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_SWITCH",
+  },
+  "toggleName": "pickle",
+  "turnOffAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_OFF",
+  },
+  "turnOnAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_ON",
+  },
+  "unsetAction": Object {
+    "meta": undefined,
+    "payload": Object {
+      "construct": "pickle",
+    },
+    "type": "PREFAB_TOGGLE_OFF",
+  },
+}
+`;

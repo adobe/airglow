@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prefab List should return a selector 1`] = `
+Object {
+  "addAction": [Function],
+  "defaultValue": Array [],
+  "doAdd": [Function],
+  "doRemove": [Function],
+  "doRemoveAt": [Function],
+  "doSet": [Function],
+  "list": [Function],
+  "reduce": [Function],
+  "removeAction": [Function],
+  "removeAtAction": [Function],
+  "searchName": "pickle",
+  "setAction": [Function],
+  "value": [Function],
+  "values": [Function],
+}
+`;
+
+exports[`prefab List should set the defaultValue if provided 1`] = `
+Object {
+  "addAction": [Function],
+  "defaultValue": Array [
+    "crisp",
+  ],
+  "doAdd": [Function],
+  "doRemove": [Function],
+  "doRemoveAt": [Function],
+  "doSet": [Function],
+  "list": [Function],
+  "reduce": [Function],
+  "removeAction": [Function],
+  "removeAtAction": [Function],
+  "searchName": "pickle",
+  "setAction": [Function],
+  "value": [Function],
+  "values": [Function],
+}
+`;

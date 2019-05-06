@@ -1,0 +1,22 @@
+{
+  "name": "@airglow/store-react",
+  "version": "0.0.1",
+  "description": "A simple global object store",
+  "author": "Adobe Systems",
+  "license": "Apache",
+  "main": "dist/index.js",
+  "dependencies": {
+    "airglow": "*",
+    "@airglow/reducers": "*",
+    "ramda": "^0.26.1",
+    "react": "^16.8.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel src --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

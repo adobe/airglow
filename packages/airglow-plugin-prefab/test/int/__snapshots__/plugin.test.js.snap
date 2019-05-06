@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AirglowUmbraIntegrationTest should call the reducer when the text changes 1`] = `
+"<App>
+  <Airglow store={[Function]} plugins={{...}}>
+    <StoreProvider store={{...}}>
+      <BootstrapWrapper config={{...}}>
+        <Component>
+          <TestComponent color=\\"Purple!\\" onColor={[Function: onColor]}>
+            <input value=\\"Purple!\\" onChange={[Function: onChange]} />
+          </TestComponent>
+        </Component>
+      </BootstrapWrapper>
+    </StoreProvider>
+  </Airglow>
+</App>"
+`;
+
+exports[`AirglowUmbraIntegrationTest should render with default values 1`] = `
+"<App>
+  <Airglow store={[Function]} plugins={{...}}>
+    <StoreProvider store={{...}}>
+      <BootstrapWrapper config={{...}}>
+        <Component>
+          <TestComponent color=\\"\\" onColor={[Function: onColor]}>
+            <input value=\\"\\" onChange={[Function: onChange]} />
+          </TestComponent>
+        </Component>
+      </BootstrapWrapper>
+    </StoreProvider>
+  </Airglow>
+</App>"
+`;

@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`airglow should append component plugins 1`] = `
+"<Airglow store={[Function: fakeStore]} renderer={[Function: Renderer]}>
+  <Renderer value={{...}}>
+    <div value={{...}}>
+      <div id=\\"airglowRootWrapper\\">
+        <div id=\\"airglowRootWrapper\\">
+          <div>
+            Test
+          </div>
+          <div>
+            Smokey
+          </div>
+        </div>
+        <div>
+          Version 2.1
+        </div>
+      </div>
+    </div>
+  </Renderer>
+</Airglow>"
+`;
+
+exports[`airglow should pass the plugins into the engine 1`] = `
+FakeStore {
+  "bootstrap": [Function],
+}
+`;
+
+exports[`airglow should render in order 1`] = `
+"<Airglow store={[Function: fakeStore]} renderer={[Function: Renderer]}>
+  <Renderer value={{...}}>
+    <div value={{...}}>
+      <div id=\\"airglowRootWrapper\\">
+        <component className=\\"sugar\\">
+          <div className=\\"sugar\\">
+            <div id=\\"airglowRootWrapper\\">
+              <div>
+                Test
+              </div>
+              <div>
+                Smokey
+              </div>
+            </div>
+          </div>
+        </component>
+        <div>
+          Version 2.1
+        </div>
+      </div>
+    </div>
+  </Renderer>
+</Airglow>"
+`;
+
+exports[`airglow should wrap higher order components around the content 1`] = `
+"<Airglow store={[Function: fakeStore]} renderer={[Function: Renderer]}>
+  <Renderer value={{...}}>
+    <div value={{...}}>
+      <component className=\\"sugar\\">
+        <div className=\\"sugar\\">
+          <div>
+            Test
+          </div>
+        </div>
+      </component>
+    </div>
+  </Renderer>
+</Airglow>"
+`;

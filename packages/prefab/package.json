@@ -1,0 +1,33 @@
+{
+  "name": "@airglow/prefab",
+  "description": "Prefabicated Selectors and Reducers",
+  "author": "Adobe Systems",
+  "license": "Apache-2.0",
+  "version": "0.0.1",
+  "files": [
+    "dist/"
+  ],
+  "publishConfig": {
+    "registry": "https://artifactory.corp.adobe.com/artifactory/api/npm/npm-nubula-release"
+  },
+  "dependencies": {
+    "@airglow/reducers": "*",
+    "ramda": "^0.26.1",
+    "reselect": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "jest": "^22.0.4"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel src --out-dir dist",
+    "test": "jest",
+    "test:approve": "npm run test -- --updateSnapshot",
+    "test:watch": "npm run test -- --watch"
+  },
+  "main": "dist/index.js",
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>../../test.setup.js"
+  }
+}

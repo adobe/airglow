@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`listReducers adds a value 1`] = `
+Object {
+  "store": Object {
+    "value": Array [
+      "yellow",
+      "green",
+      "white",
+    ],
+  },
+}
+`;
+
+exports[`listReducers adds a value to the default 1`] = `
+Object {
+  "construct": Object {
+    "defaultValue": Array [
+      "red",
+      "black",
+    ],
+  },
+  "store": Object {
+    "value": Array [
+      "red",
+      "black",
+      "white",
+    ],
+  },
+}
+`;
+
+exports[`listReducers removes a value 1`] = `
+Object {
+  "store": Object {
+    "value": Array [
+      "yellow",
+    ],
+  },
+}
+`;
+
+exports[`listReducers removes a value at the proper index 1`] = `
+Object {
+  "store": Object {
+    "value": Array [
+      "yellow",
+    ],
+  },
+}
+`;
+
+exports[`listReducers removes a value from the default 1`] = `
+Object {
+  "construct": Object {
+    "defaultValue": Array [
+      "red",
+      "black",
+    ],
+  },
+  "store": Object {
+    "value": Array [
+      "black",
+    ],
+  },
+}
+`;
+
+exports[`listReducers sets the value 1`] = `
+Object {
+  "store": Object {
+    "value": Array [
+      "white",
+    ],
+  },
+}
+`;

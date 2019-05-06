@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResetReducer should not mutate input 1`] = `
+Object {
+  "extra": true,
+  "iceCream": "rocky road",
+  "initializedTo": Object {
+    "drink": "coke",
+    "iceCream": "vanila",
+    "pizza": "pepperoni",
+    "salad": "caesar",
+  },
+  "pizza": "vegi",
+  "salad": "chop",
+}
+`;
+
+exports[`ResetReducer should reset everything if not specific 1`] = `
+Object {
+  "drink": "coke",
+  "extra": true,
+  "iceCream": "vanila",
+  "initializedTo": Object {
+    "drink": "coke",
+    "iceCream": "vanila",
+    "pizza": "pepperoni",
+    "salad": "caesar",
+  },
+  "pizza": "pepperoni",
+  "salad": "caesar",
+}
+`;
+
+exports[`ResetReducer should reset individual items 1`] = `
+Object {
+  "extra": true,
+  "iceCream": "rocky road",
+  "initializedTo": Object {
+    "drink": "coke",
+    "iceCream": "vanila",
+    "pizza": "pepperoni",
+    "salad": "caesar",
+  },
+  "pizza": "pepperoni",
+  "salad": "chop",
+}
+`;
+
+exports[`ResetReducer should reset multiple items 1`] = `
+Object {
+  "extra": true,
+  "iceCream": "rocky road",
+  "initializedTo": Object {
+    "drink": "coke",
+    "iceCream": "vanila",
+    "pizza": "pepperoni",
+    "salad": "caesar",
+  },
+  "pizza": "pepperoni",
+  "salad": "caesar",
+}
+`;
+
+exports[`ResetReducer should reset to undefined if it wasnt initilized 1`] = `
+Object {
+  "extra": undefined,
+  "iceCream": "rocky road",
+  "initializedTo": Object {
+    "drink": "coke",
+    "iceCream": "vanila",
+    "pizza": "pepperoni",
+    "salad": "caesar",
+  },
+  "pizza": "vegi",
+  "salad": "chop",
+}
+`;

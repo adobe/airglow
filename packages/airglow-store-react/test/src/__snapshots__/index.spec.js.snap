@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Airglow ReactStore can inject new reducers 1`] = `
+Object {
+  "address": Object {
+    "city": "Sporksville",
+    "initializedTo": Object {
+      "city": "Sporksville",
+    },
+  },
+  "data": Object {
+    "initializedTo": Object {
+      "name": "Jimmy",
+    },
+    "name": "Jimmy",
+  },
+}
+`;
+
+exports[`Airglow ReactStore dispatches to all the reducers 1`] = `
+Object {
+  "data": Object {
+    "initializedTo": Object {
+      "name": "Jimmy",
+    },
+    "name": "Dave",
+  },
+}
+`;
+
+exports[`Airglow ReactStore ignores empty reducers 1`] = `
+Object {
+  "data": Object {
+    "initializedTo": Object {
+      "name": "Jimmy",
+    },
+    "name": "Jimmy",
+  },
+}
+`;
+
+exports[`Airglow ReactStore initilizes state properly 1`] = `
+Object {
+  "data": Object {
+    "initializedTo": Object {
+      "name": "Jimmy",
+    },
+    "name": "Jimmy",
+  },
+}
+`;

@@ -1,0 +1,15 @@
+{
+  "name": "@airglow/eslint-config-airglow",
+  "version": "2.2.4",
+  "description": "A custom set of eslint rules",
+  "author": "Adobe Systems",
+  "license": "Apache-2.0",
+  "scripts": {},
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}

@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/airglow-build
     docker:
-      - image: docker-asr-release.dr.corp.adobe.com/asr/nodejs_v10:1.2-alpine
+      - image: circleci/node:10.15.3
     steps: # a collection of executable commands
       - checkout
       - restore_cache: # special step to restore the dependency cache
@@ -24,22 +24,16 @@ jobs:
           command: npm run build
       - run:
           name: eslint
-          command: npm run lint
-      - run:
-          name: Install JUnit coverage reporter
-          command: npm install jest-junit
+          command: npm run lint -- --format junit -o reports/junit/js-lint-results.xml
       - run:
           name: Run tests with JUnit as reporter
           command: npm run coverage -- --ci --runInBand --reporters=default --reporters=jest-junit
           environment:
             JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
-      - store_artifacts: # special step to save test results as as artifact
-          # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
-          path: junit.xml
-          prefix: tests
+      - store_test_results:
+          path: reports/junit
       - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
           path: coverage
           prefix: coverage
       - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
-          path: junit.xml
-      # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
+          path: reports/junit

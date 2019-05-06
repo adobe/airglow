@@ -62,5 +62,8 @@
       "\\.(css|styl)$": "identity-obj-proxy"
     },
     "testURL": "http://localhost/"
+  },
+  "dependencies": {
+    "jest-junit": "^6.4.0"
   }
 }

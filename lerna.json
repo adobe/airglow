@@ -1,6 +1,6 @@
 {
   "lerna": "2.11.0",
-	"command": {
+  "command": {
     "publish": {
       "ignoreChanges": [
         "*.md"
@@ -14,5 +14,5 @@
     "packages/*",
     "packages/samples/*"
   ],
-  "version": "0.0.0"
+  "version": "0.1.0"
 }

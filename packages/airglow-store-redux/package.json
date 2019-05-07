@@ -1,6 +1,6 @@
 {
   "name": "@airglow/store-redux",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -11,8 +11,8 @@
   "license": "Apache-2.0",
   "main": "dist/index.js",
   "dependencies": {
-    "airglow": "*",
-    "@airglow/reducers": "*",
+    "@airglow/reducers": "^0.1.0",
+    "airglow": "^0.1.0",
     "ramda": "^0.26.1",
     "react": "^16.8.4",
     "react-redux": "^7.0.3",

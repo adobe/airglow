@@ -33,5 +33,5 @@
     "build": "babel src --out-dir dist --root-mode upward"
   },
   "main": "dist/index.js",
-  "gitHead": "444e3589f809c5a41f05fc317e369f7640dc0e17"
+  "gitHead": "40d79588437fc54778f38d351f9a219f31b30e7f"
 }

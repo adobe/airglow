@@ -15,9 +15,6 @@
   "files": [
     "dist/"
   ],
-  "publishConfig": {
-    "registry": "https://artifactory.corp.adobe.com/artifactory/api/npm/npm-nubula-release"
-  },
   "dependencies": {
     "@airglow/reducers": "*",
     "ramda": "^0.26.1",

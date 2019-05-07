@@ -1,6 +1,11 @@
 {
   "name": "@airglow/eslint-config-airglow",
-  "version": "2.2.4",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/airglow.git",
+    "directory": "packages/eslint-config-airglow"
+  },
   "description": "A custom set of eslint rules",
   "author": "Adobe Systems",
   "license": "Apache-2.0",

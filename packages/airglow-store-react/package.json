@@ -1,7 +1,12 @@
 {
   "name": "@airglow/store-react",
   "version": "0.0.1",
-  "description": "A simple global object store",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/airglow.git",
+    "directory": "packages/airglow-store-react"
+  },
+  "description": "A simple React global object store for Airglow",
   "author": "Adobe Systems",
   "license": "Apache",
   "main": "dist/index.js",

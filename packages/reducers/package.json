@@ -1,6 +1,11 @@
 {
   "name": "@airglow/reducers",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/airglow.git",
+    "directory": "packages/reducers"
+  },
   "description": "A library of simple javascript reducers",
   "author": "Adobe Systems",
   "license": "Apache-2.0",

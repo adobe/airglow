@@ -1,13 +1,13 @@
 {
   "name": "@airglow/prefab",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
     "directory": "packages/prefab"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://artifactory.corp.adobe.com/artifactory/api/npm/npm-nubula-release"
   },
   "description": "Prefabicated Selectors and Reducers",
   "author": "Adobe Systems",
@@ -15,11 +15,8 @@
   "files": [
     "dist/"
   ],
-  "publishConfig": {
-    "registry": "https://artifactory.corp.adobe.com/artifactory/api/npm/npm-nubula-release"
-  },
   "dependencies": {
-    "@airglow/reducers": "*",
+    "@airglow/reducers": "^0.1.0",
     "ramda": "^0.26.1",
     "reselect": "^4.0.0"
   },

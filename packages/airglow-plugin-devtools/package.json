@@ -18,21 +18,14 @@
   },
   "devDependencies": {
     "@airglow/store-redux": "*",
-    "babel-cli": "^6.10.1",
-    "jest": "^24.8.0"
+    "@babel/cli": "^7.4.0"
   },
   "resolutions": {
     "redux-devtools-log-monitor/react-json-tree": "0.11.0"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
-    "build": "babel src --out-dir dist",
-    "test": "jest",
-    "test:approve": "npm run test -- --updateSnapshot",
-    "test:watch": "npm run test -- --watch"
+    "build": "babel src --out-dir dist --root-mode upward"
   },
-  "main": "dist/index.js",
-  "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>../../test.setup.js"
-  }
+  "main": "dist/index.js"
 }

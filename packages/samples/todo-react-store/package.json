@@ -15,12 +15,7 @@
     "@airglow/store-react": "*",
     "@material-ui/core": "3.9.3",
     "@material-ui/icons": "3.0.2",
-    "babel-eslint": "10.0.1",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-redux": "^7.0.3",
-    "react-scripts": "3.0.0",
-    "redux": "^4.0.1"
+    "react-scripts": "3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

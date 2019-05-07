@@ -12,11 +12,11 @@
     "react": "^16.8.4"
   },
   "devDependencies": {
-    "babel-cli": "^6.10.1"
+    "@babel/cli": "^7.4.0"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist --root-mode upward",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

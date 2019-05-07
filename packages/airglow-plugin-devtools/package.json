@@ -19,7 +19,7 @@
   "devDependencies": {
     "@airglow/store-redux": "*",
     "babel-cli": "^6.10.1",
-    "jest": "^22.0.4"
+    "jest": "^24.8.0"
   },
   "resolutions": {
     "redux-devtools-log-monitor/react-json-tree": "0.11.0"

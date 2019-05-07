@@ -72,7 +72,7 @@ Let's run through a simple example setting up Airglow for a todo app. You may fi
 
 For the following example, we're going to use a Redux store and use a pair of Prefabs to store a list of Todo items and a Todo input value:
 
-```
+```js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Airglow from 'airglow';
@@ -101,7 +101,7 @@ Lets take a look at the plugins file:
 
 ### Plugins
 
-```
+```js
 import prefabPlugin from '@airglow/plugin-prefab';
 import devtoolPlugin from '@airglow/plugin-devtools';
 
@@ -119,7 +119,7 @@ Some plugins require additional configuration. They are broken out of the main c
 
 Let's take a look at the sample bootstrap config:
 
-```
+```js
 import prefab from '@airglow/prefab';
 
 const prefabs = prefab({
@@ -146,7 +146,7 @@ Note that we export our Prefabs individually so they can be accessed elsewhere i
 
 Let's look at how we've wired up our Prefabs in our container:
 
-```
+```js
 import { connect } from 'react-redux';
 import TodoUI from '../components/todo.ui';
 import { newTodo, todoList } from '../bootstrap.config';

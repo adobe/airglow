@@ -6,9 +6,6 @@
     "url": "https://github.com/adobe/airglow.git",
     "directory": "packages/prefab"
   },
-  "publishConfig": {
-    "registry": "https://artifactory.corp.adobe.com/artifactory/api/npm/npm-nubula-release"
-  },
   "description": "Prefabicated Selectors and Reducers",
   "author": "Adobe Systems",
   "license": "Apache-2.0",

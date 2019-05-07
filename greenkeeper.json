@@ -1,0 +1,19 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "packages/airglow-plugin-devtools/package.json",
+        "packages/airglow-plugin-prefab/package.json",
+        "packages/airglow-store-react/package.json",
+        "packages/airglow-store-redux/package.json",
+        "packages/airglow/package.json",
+        "packages/eslint-config-airglow/package.json",
+        "packages/prefab/package.json",
+        "packages/reducers/package.json",
+        "packages/samples/todo-react-store/package.json",
+        "packages/samples/todo-redux/package.json"
+      ]
+    }
+  }
+}

@@ -6,6 +6,9 @@
     "url": "https://github.com/adobe/airglow.git",
     "directory": "packages/airglow-store-react"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "A simple React global object store for Airglow",
   "author": "Adobe Systems",
   "license": "Apache",

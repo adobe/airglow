@@ -11,17 +11,15 @@ governing permissions and limitations under the License.
 */
 
 import { REDUCER, BOOTSTRAP_MODULE } from 'airglow';
-import { reducer } from '@airglow/prefab';
-import * as wrinkle from '@airglow/reducers';
 import plugin from '../../src/index';
 
 let engine;
-let slice;
 let dispatch;
 const getCall = (type) => {
-  for (let i = 0; i < engine.plugin.callCount; ++i) {
-    if (engine.plugin.getCall(i).args[0] === type) {
-      return engine.plugin.getCall(i).args[1];
+  const { calls } = engine.plugin.mock;
+  for (let i = 0; i < calls.length; ++i) {
+    if (calls[i][0] === type) {
+      return calls[i][1];
     }
   }
   return null;
@@ -29,20 +27,17 @@ const getCall = (type) => {
 
 describe('AirglowPrefabPlugin', () => {
   beforeEach(() => {
-    engine = { plugin: sinon.spy() };
-    slice = { with: sinon.stub().returns('SLICED!') };
-    sinon.stub(wrinkle, 'slice').returns(slice);
+    engine = { plugin: jest.fn() };
+
+    // slice = { with: sinon.stub().returns('SLICED!') };
+    // sinon.stub(wrinkle, 'slice').returns(slice);
     dispatch = sinon.spy();
 
     plugin({ storeKey: 'myprefab' })(engine);
   });
-  afterEach(() => {
-    wrinkle.slice.restore();
-  });
 
   it('should register reducers', function () {
-    expect(getCall(REDUCER)).toBe('SLICED!');
-    expect(slice.with.firstCall.args[0]).toBe(reducer);
+    expect(getCall(REDUCER)).toBeDefined();
   });
 
   it('should send the prefab content on bootstrap', function () {

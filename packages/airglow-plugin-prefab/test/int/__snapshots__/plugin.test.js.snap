@@ -2,7 +2,7 @@
 
 exports[`AirglowPrefabIntegrationTest should call the reducer when the text changes 1`] = `
 "<App>
-  <Airglow store={[Function]} plugins={{...}} bootstrap={{...}}>
+  <Airglow store={[Function: _default]} plugins={{...}} bootstrap={{...}}>
     <StoreProvider store={{...}}>
       <AirglowWrapper config={{...}}>
         <Component>
@@ -18,7 +18,7 @@ exports[`AirglowPrefabIntegrationTest should call the reducer when the text chan
 
 exports[`AirglowPrefabIntegrationTest should render with default values 1`] = `
 "<App>
-  <Airglow store={[Function]} plugins={{...}} bootstrap={{...}}>
+  <Airglow store={[Function: _default]} plugins={{...}} bootstrap={{...}}>
     <StoreProvider store={{...}}>
       <AirglowWrapper config={{...}}>
         <Component>

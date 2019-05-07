@@ -23,8 +23,10 @@ describe('AirglowDevToolsIntegrationTest', () => {
   const spawn = (options) => {
     tree = renderAirglow(
       <TestComponent />,
-      ReduxStore,
-      [plugin(options)]
+      {
+        store: ReduxStore,
+        plugins: [plugin(options)]
+      }
     );
   };
 

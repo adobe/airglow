@@ -12,36 +12,17 @@ governing permissions and limitations under the License.
 
 import React from 'react';
 
-const BootstrapContext = React.createContext();
+const AirglowContext = React.createContext();
 
-export const BootstrapProvider = BootstrapContext.Provider;
+export const AirglowProvider = AirglowContext.Provider;
 
-/*
-const mapHandlers = (dispatch, props) => ({
-  onMount: () => {
-    const { loaders = [] } = props;
-    loaders.forEach((loader) => {
-      dispatch(loader());
-    });
-  }
-});
-*/
-
-export class BootstrapWrapper extends React.Component {
+export class AirglowWrapper extends React.Component {
   componentWillMount() {
     this.context.bootstrap(this.props.config);
   }
-
-  /*
-  componentDidMount() {
-    this.props.onMount();
-  }
-  */
 
   render() {
     return this.props.children;
   }
 }
-BootstrapWrapper.contextType = BootstrapContext;
-
-// export default connect({ mapHandlers }, Bootstrapper);
+AirglowWrapper.contextType = AirglowContext;

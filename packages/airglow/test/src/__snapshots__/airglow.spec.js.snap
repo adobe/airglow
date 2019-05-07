@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`airglow creates an AirglowWrapper HOC if bootstrap is specified 1`] = `
+Array [
+  "higherOrderComponent",
+  Object {
+    "component": [Function],
+    "props": Object {
+      "config": "bootstrap data",
+    },
+  },
+]
+`;
+
 exports[`airglow should append component plugins 1`] = `
 "<Airglow store={[Function: fakeStore]} renderer={[Function: Renderer]}>
   <Renderer value={{...}}>

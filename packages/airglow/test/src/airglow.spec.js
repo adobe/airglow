@@ -20,7 +20,7 @@ import { COMPONENT, HOC } from '../../src/types';
 import { fakeStore } from '../../src/util/test.util';
 
 let bootstrapSpy;
-
+let pluginSpy;
 
 const Renderer = props => (
   <div {...props} />
@@ -56,6 +56,7 @@ describe('airglow', () => {
 
   const stubEngine = ({ components: cs = [], wrappers: wrs = [] } = {}) => {
     bootstrapSpy = sinon.spy();
+    pluginSpy = sinon.spy();
     sinon.stub(engine, 'default').callsFake(() => ({
       store: 'STORE!',
       getPluginsData: (type) => {
@@ -63,6 +64,7 @@ describe('airglow', () => {
         if (type === HOC) { return wrs; }
         return [];
       },
+      plugin: pluginSpy,
       bootstrapModule: bootstrapSpy
     }));
   };
@@ -129,5 +131,19 @@ describe('airglow', () => {
     const rendered = mount(<Airglow store={fakeStore} plugins={[]} renderer={Renderer} />);
     rendered.find(Renderer).props().value.bootstrap('zipper');
     expect(bootstrapSpy.calledWith('zipper')).toBe(true);
+  });
+
+  it('creates an AirglowWrapper HOC if bootstrap is specified', () => {
+    stubEngine();
+    mount(
+      <Airglow
+        store={fakeStore}
+        renderer={Renderer}
+        bootstrap="bootstrap data"
+      >
+        <div key="A">Test</div>
+      </Airglow>
+    );
+    expect(pluginSpy.getCall(0).args).toMatchSnapshot();
   });
 });

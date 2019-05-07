@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Airglow, { BootstrapWrapper } from 'airglow';
+import Airglow, { AirglowWrapper } from 'airglow';
 import ReduxStore from '@airglow/store-redux';
 import MainContainer from './containers/main.container';
 import plugins from './data/plugins';
@@ -22,9 +22,9 @@ import './styles.css';
 
 const App = () => (
   <Airglow store={ReduxStore} plugins={plugins}>
-    <BootstrapWrapper config={bootstapConfig}>
+    <AirglowWrapper config={bootstapConfig}>
       <MainContainer />
-    </BootstrapWrapper>
+    </AirglowWrapper>
   </Airglow>
 );
 

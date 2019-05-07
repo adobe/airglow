@@ -26,7 +26,7 @@ let tree;
 
 describe('AirglowTestUtil', () => {
   beforeEach(() => {
-    tree = renderAirglow(<div>Hello</div>, fakeStore, [slimePlugin]);
+    tree = renderAirglow(<div>Hello</div>, { store: fakeStore, plugins: [slimePlugin] });
   });
   it('should render the desired children', function () {
     expect(tree.debug()).toMatchSnapshot();

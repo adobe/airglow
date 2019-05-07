@@ -6,6 +6,9 @@
     "url": "https://github.com/adobe/airglow.git",
     "directory": "packages/airglow"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Simple Clean React Framework",
   "author": "Adobe Systems",
   "license": "Apache-2.0",

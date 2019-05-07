@@ -6,6 +6,9 @@
     "url": "https://github.com/adobe/airglow.git",
     "directory": "packages/prefab"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Prefabicated Selectors and Reducers",
   "author": "Adobe Systems",
   "license": "Apache-2.0",

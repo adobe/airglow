@@ -6,6 +6,9 @@
     "url": "https://github.com/adobe/airglow.git",
     "directory": "packages/eslint-config-airglow"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "A custom set of eslint rules",
   "author": "Adobe Systems",
   "license": "Apache-2.0",

@@ -7,6 +7,9 @@
     "url": "https://github.com/adobe/airglow.git",
     "directory": "packages/airglow-plugin-devtools"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Adobe Systems",
   "license": "Apache-2.0",
   "files": [

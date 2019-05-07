@@ -6,6 +6,9 @@
     "url": "https://github.com/adobe/airglow.git",
     "directory": "packages/airglow-store-redux"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Redux store for Airglow",
   "author": "Adobe Systems",
   "license": "Apache-2.0",

@@ -6,6 +6,9 @@
     "url": "https://github.com/adobe/airglow.git",
     "directory": "packages/reducers"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "A library of simple javascript reducers",
   "author": "Adobe Systems",
   "license": "Apache-2.0",

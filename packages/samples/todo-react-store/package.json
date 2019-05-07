@@ -1,6 +1,11 @@
 {
   "name": "@airglow/sample-todo-react-store",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/airglow.git",
+    "directory": "packages/samples/todo-react-store"
+  },
   "description": "",
   "author": "Adobe Systems",
   "license": "Apache-2.0",

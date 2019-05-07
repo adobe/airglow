@@ -1,15 +1,17 @@
 {
   "name": "@airglow/plugin-prefab",
-  "description": "An prefab plugin for airglow.",
-  "version": "2.9.7",
+  "description": "An prefab plugin for Airglow.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/airglow.git",
+    "directory": "packages/airglow-plugin-prefab"
+  },
   "author": "Adobe Systems",
   "license": "Apache-2.0",
   "files": [
     "dist/"
   ],
-  "publishConfig": {
-    "registry": "https://artifactory.corp.adobe.com/artifactory/api/npm/npm-nubula-release"
-  },
   "dependencies": {
     "airglow": "*",
     "@airglow/reducers": "*",

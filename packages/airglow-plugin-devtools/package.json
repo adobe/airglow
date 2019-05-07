@@ -1,15 +1,17 @@
 {
   "name": "@airglow/plugin-devtools",
-  "description": "A react module loader.",
-  "version": "0.7.2",
+  "description": "Load React and Redux Devtools in Airglow.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/airglow.git",
+    "directory": "packages/airglow-plugin-devtools"
+  },
   "author": "Adobe Systems",
   "license": "Apache-2.0",
   "files": [
     "dist/"
   ],
-  "publishConfig": {
-    "registry": "https://artifactory.corp.adobe.com/artifactory/api/npm/npm-nubula-release"
-  },
   "dependencies": {
     "airglow": "*",
     "redux-devtools": "^3.4.0",

@@ -1,9 +1,14 @@
 {
   "name": "@airglow/prefab",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/airglow.git",
+    "directory": "packages/prefab"
+  },
   "description": "Prefabicated Selectors and Reducers",
   "author": "Adobe Systems",
   "license": "Apache-2.0",
-  "version": "0.0.1",
   "files": [
     "dist/"
   ],

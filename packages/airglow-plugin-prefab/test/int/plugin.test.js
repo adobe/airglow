@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 import React from 'react';
-import { AirglowWrapper, renderAirglow } from 'airglow';
+import { renderAirglow } from 'airglow';
 import ReactStore, { connect } from '@airglow/store-react';
 import prefab from '@airglow/prefab';
 
@@ -38,13 +38,12 @@ const configuredPlugin = plugin();
 describe('AirglowPrefabIntegrationTest', () => {
   beforeEach(() => {
     tree = renderAirglow(
-      <AirglowWrapper
-        config={{ prefab: prefabs }}
-      >
-        <TestConnected />
-      </AirglowWrapper>,
-      ReactStore,
-      [configuredPlugin]
+      <TestConnected />,
+      {
+        store: ReactStore,
+        plugins: [configuredPlugin],
+        bootstrap: { prefab: prefabs }
+      }
     );
   });
   afterEach(() => {

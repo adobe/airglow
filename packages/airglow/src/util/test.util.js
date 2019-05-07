@@ -14,11 +14,11 @@ import React from 'react';
 import { mount } from 'enzyme';
 import Airglow from '../airglow';
 
-export const renderAirglow = (children, store, plugins) => {
+export const renderAirglow = (children, props) => {
   let airglow;
   const App = () => {
     airglow = (
-      <Airglow store={store} plugins={plugins}>
+      <Airglow {...props}>
         {children}
       </Airglow>
     );

@@ -14,7 +14,7 @@ import * as R from 'ramda';
 import React from 'react';
 import { StoreConsumer } from './store.context';
 
-export default (mapState = R.indentity, mapHandlers = R.indentity) => Container => props => (
+export default (mapState = R.identity, mapHandlers = R.identity) => Container => props => (
   <StoreConsumer>
     {({ state, store }) => (
       <Container

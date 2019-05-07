@@ -1,6 +1,6 @@
 {
   "name": "@airglow/prefab",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -13,7 +13,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@airglow/reducers": "^0.1.0",
+    "@airglow/reducers": "^0.1.1",
     "ramda": "^0.26.1",
     "reselect": "^4.0.0"
   },

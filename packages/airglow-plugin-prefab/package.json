@@ -18,7 +18,7 @@
   "devDependencies": {
     "@airglow/store-react": "*",
     "babel-cli": "^6.10.1",
-    "jest": "^22.0.4"
+    "jest": "^24.8.0"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",

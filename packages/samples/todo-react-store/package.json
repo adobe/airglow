@@ -1,6 +1,6 @@
 {
   "name": "@airglow/sample-todo-react-store",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -13,13 +13,13 @@
   "main": "src/index.js",
   "private": true,
   "devDependencies": {
-    "@airglow/plugin-devtools": "^0.1.1",
-    "@airglow/plugin-prefab": "^0.1.1",
-    "@airglow/prefab": "^0.1.1",
-    "@airglow/store-react": "^0.1.1",
+    "@airglow/plugin-devtools": "^0.1.0",
+    "@airglow/plugin-prefab": "^0.1.0",
+    "@airglow/prefab": "^0.1.0",
+    "@airglow/store-react": "^0.1.0",
     "@material-ui/core": "3.9.3",
     "@material-ui/icons": "3.0.2",
-    "airglow": "^0.1.1",
+    "airglow": "^0.1.0",
     "react-scripts": "3.0.0"
   },
   "scripts": {

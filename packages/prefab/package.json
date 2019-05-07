@@ -24,5 +24,6 @@
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "babel src --out-dir dist --root-mode upward"
   },
-  "main": "dist/index.js"
+  "main": "dist/index.js",
+  "gitHead": "444e3589f809c5a41f05fc317e369f7640dc0e17"
 }

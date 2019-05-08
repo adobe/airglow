@@ -12,6 +12,9 @@
   "description": "A simple React global object store for Airglow",
   "author": "Adobe Systems",
   "license": "Apache",
+  "files": [
+    "dist/"
+  ],
   "main": "dist/index.js",
   "dependencies": {
     "@airglow/reducers": "^0.1.1",

@@ -12,6 +12,9 @@
   "description": "Simple Clean React Framework",
   "author": "Adobe Systems",
   "license": "Apache-2.0",
+  "files": [
+    "dist/"
+  ],
   "main": "dist/index.js",
   "dependencies": {
     "ramda": "^0.26.1",

@@ -13,6 +13,9 @@
   "author": "Adobe Systems",
   "license": "Apache-2.0",
   "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
   "dependencies": {
     "@airglow/reducers": "^0.1.1",
     "airglow": "^0.1.1",

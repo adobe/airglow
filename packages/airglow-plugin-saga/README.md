@@ -1,51 +1,51 @@
-# Corona-Saga Plugin
+# Airglow Saga Plugin
 
-A [Corona](https://git.corp.adobe.com/dms-mobile/dipper/packages/corona) plugin that adds [Redux Saga](https://redux-saga.js.org/) middleware layer to your application.
+An Airglow plugin that adds [Redux Saga](https://redux-saga.js.org/) middleware layer to your application.
 
 ## Usage
 
 To enable, simply add the plugin:
 
 ```
-import sagaPlugin from '@nebula/corona-saga-plugin';
+import sagaPlugin from '@airglow/plugin-saga';
 
 const App = () => (
-  <Corona plugins={{
+  <Airglow plugins={{
     sagaPlugin({ locales })
   }}>
     <AppContainer />
-  </Corona>
+  </Airglow>
 );
 ```
 
 ## Adding Sagas
 
-Your MicroUIs can add new sagas on bootstrap:
+When Bootstraping a UI or initilizting your app, you can add new sagas:
 
 ```
 import sagas from './sagas';
 
 const Wrapper = props => (
-  <BootstrapWrapper
+  <AirglowWrapper
     config={{
       name: 'sample',
       sagas
     }}
   >
     <UIContainer {...props} />
-  </BootstrapWrapper>
+  </AirglowWrapper>
 );
 ```
 
 ## Saga Plugin Feature
 
-By adding the Saga Plugin, you enable a new plugin feature. Other plugins may now use the `SAGA` plugin hook to register their own sagas. For example, the [Corona-Izzy Plugin](https://git.corp.adobe.com/dms-mobile/dipper/packages/corona-izzy-plugin) has the following setup:
+By adding the Saga Plugin, you enable a new plugin feature. Other plugins may now use the `SAGA` plugin hook to register their own sagas:
 
 ```
-import { SAGA } from '@nebula/corona-saga-plugin';
-import { sagas } from '@nebula/izzy';
+import { SAGA } from '@airglow/plugin-saga';
+import { sagas } from 'custom-airglow-plugin';
 
-export default function izzyPlugin() {
+export default function plugin() {
   return (engine) => {
     ...
     engine.plugin(SAGA, sagas);
@@ -53,4 +53,4 @@ export default function izzyPlugin() {
 }
 ```
 
-Here we are registering Izzy's custom sagas that load external localization files with our saga middleware.
+Here we are registering our custom plugin's sagas so they can respond to Redux dispatches.

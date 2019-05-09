@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@airglow/store-redux": "^0.1.2",
-    "@babel/cli": "^7.4.0"
+    "@babel/cli": "^7.4.4"
   },
   "resolutions": {
     "redux-devtools-log-monitor/react-json-tree": "0.11.0"

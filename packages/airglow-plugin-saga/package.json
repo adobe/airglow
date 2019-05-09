@@ -1,31 +1,31 @@
 {
-  "name": "@airglow/prefab",
+  "name": "@airglow/plugin-saga",
+  "description": "A redux-saga plugin for airglow.",
   "version": "0.1.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
-    "directory": "packages/prefab"
+    "directory": "packages/airglow-plugin-saga"
   },
   "publishConfig": {
     "access": "public"
   },
-  "description": "Prefabicated Selectors and Reducers",
   "author": "Adobe Systems",
   "license": "Apache-2.0",
   "files": [
     "dist/"
   ],
   "dependencies": {
-    "@airglow/reducers": "^0.1.2",
-    "reselect": "^4.0.0"
+    "airglow": "^0.1.2",
+    "redux-saga": "^1.0.2"
   },
   "devDependencies": {
+    "@airglow/store-redux": "^0.1.2",
     "@babel/cli": "^7.4.4"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "babel src --out-dir dist --root-mode upward"
   },
-  "main": "dist/index.js",
-  "gitHead": "40d79588437fc54778f38d351f9a219f31b30e7f"
+  "main": "dist/index.js"
 }

@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@airglow/store-react": "^0.1.2",
-    "@babel/cli": "^7.4.0"
+    "@babel/cli": "^7.4.4"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",

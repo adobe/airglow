@@ -16,16 +16,16 @@
   "files": [
     "dist/"
   ],
-  "dependencies": {
-    "@airglow/reducers": "^0.1.2",
-    "airglow": "^0.1.2",
-    "ramda": "^0.26.1",
-    "react": "^16.8.4",
-    "react-redux": "^7.0.3",
+  "peerDependencies": {
     "redux": "^4.0.1"
   },
+  "dependencies": {
+    "react-redux": "^7.0.3",
+    "@airglow/reducers": "^0.1.2",
+    "airglow": "^0.1.2"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.4.0"
+    "@babel/cli": "^7.4.4"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",

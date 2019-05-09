@@ -18,12 +18,10 @@
   "main": "dist/index.js",
   "dependencies": {
     "@airglow/reducers": "^0.1.2",
-    "airglow": "^0.1.2",
-    "ramda": "^0.26.1",
-    "react": "^16.8.4"
+    "airglow": "^0.1.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.0"
+    "@babel/cli": "^7.4.4"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",

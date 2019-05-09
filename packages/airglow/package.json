@@ -16,12 +16,14 @@
     "dist/"
   ],
   "main": "dist/index.js",
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
   "dependencies": {
-    "ramda": "^0.26.1",
-    "react": "^16.8.4"
+    "ramda": "^0.26.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.0"
+    "@babel/cli": "^7.4.4"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",

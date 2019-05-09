@@ -63,6 +63,7 @@ Plugins are what makes Airglow so powerful. You can mix and match any of the plu
 | ----------- | ----------- |
 | [Prefab](./packages/airglow-plugin-prefab) | Out of the box reducers and selectors for common datatypes |
 | [DevTools](./packages/airglow-plugin-devtools) | Enables the React and Redux devtools  |
+| [Saga](./packages/airglow-plugin-saga) | Adds Redux-Saga to your Redux store  |
 
 ## Getting Started
 

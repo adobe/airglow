@@ -20,8 +20,14 @@ const TestComponent = ({ value, onChange }) => (
   <input type="text" value={value || ''} onChange={onChange} />
 );
 const TestConnected = connect(
-  state => ({ value: state.data && state.data.name }),
-  dispatch => ({ onChange: e => dispatch({ type: 'updateName', payload: e.target.value }) })
+  state => ({
+    value: state.data && state.data.name,
+    data: { name: 'key', value: 'eleven' }
+  }),
+  dispatch => ({
+    onChange: e => dispatch({ type: 'updateName', payload: e.target.value }),
+    data: { value: 'thirteen' }
+  })
 )(TestComponent);
 
 const bootstrapConfig = {
@@ -36,7 +42,7 @@ const bootstrapConfig = {
 describe('Redux BootstrapIntegrationTest', () => {
   beforeEach(() => {
     tree = renderAirglow(
-      <TestConnected />,
+      <TestConnected data={{ name: 'props', value: 'six', details: 'meta' }} />,
       {
         store: ReactStore,
         plugins: [],
@@ -55,5 +61,8 @@ describe('Redux BootstrapIntegrationTest', () => {
     tree.unmount();
     const subs = tree.store.subscriptions;
     expect(tree.store.subscriptions[Object.keys(subs)[0]]).toBe(null);
+  });
+  it('merges nested props', () => {
+    expect(tree.find('TestComponent').prop('data')).toMatchSnapshot();
   });
 });

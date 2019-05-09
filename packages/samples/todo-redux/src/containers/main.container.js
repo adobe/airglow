@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect } from '@airglow/store-redux';
 import TodoMain from '../components/todo.main';
 import FormContainer from './form.container';
 import ListContainer from './list.container';

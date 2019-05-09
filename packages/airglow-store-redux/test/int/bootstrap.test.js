@@ -11,18 +11,24 @@ governing permissions and limitations under the License.
 */
 
 import React from 'react';
-import { connect } from 'react-redux';
 import { initialize, slice } from '@airglow/reducers';
 import { renderAirglow } from 'airglow';
-import ReduxStore from '../../src';
+import ReduxStore, { connect } from '../../src';
 
 let tree;
 const TestComponent = ({ text }) => (
   <div>{text}</div>
 );
-const TestConnected = connect(state => (
-  { text: state.data && state.data.bellHopper }
-))(TestComponent);
+const TestConnected = connect(
+  state => ({
+    text: state.data && state.data.bellHopper,
+    data: { name: 'key', value: 'eleven' }
+  }),
+  dispatch => ({
+    onChange: e => dispatch({ type: 'updateName', payload: e.target.value }),
+    data: { value: 'thirteen' }
+  })
+)(TestComponent);
 
 const bootstrapConfig = {
   name: 'bellHopper',
@@ -34,7 +40,7 @@ const bootstrapConfig = {
 describe('Redux BootstrapIntegrationTest', () => {
   beforeEach(() => {
     tree = renderAirglow(
-      <TestConnected />,
+      <TestConnected data={{ name: 'props', value: 'six', details: 'meta' }} />,
       {
         store: ReduxStore,
         plugins: [],
@@ -44,5 +50,8 @@ describe('Redux BootstrapIntegrationTest', () => {
   });
   it('should use the bootsrapped reducers', () => {
     expect(tree).not.toBe(null);
+  });
+  it('merges nested props', () => {
+    expect(tree.find('TestComponent').prop('data')).toMatchSnapshot();
   });
 });

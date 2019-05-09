@@ -13,8 +13,7 @@ governing permissions and limitations under the License.
 import React from 'react';
 import { mount } from 'enzyme';
 import Airglow, { ENHANCER } from 'airglow';
-import { connect } from 'react-redux';
-import ReduxStore from '../../src';
+import ReduxStore, { connect } from '../../src';
 
 const testEnhancer = createStore => (...args) => {
   const store = createStore(...args);

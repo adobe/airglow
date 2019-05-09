@@ -11,12 +11,10 @@ governing permissions and limitations under the License.
 */
 
 import React from 'react';
-import { connect } from 'react-redux';
 import { mount } from 'enzyme';
 
 import Airglow, { REDUCER } from 'airglow';
-import ReduxStore from '../../src';
-
+import ReduxStore, { connect } from '../../src';
 
 const ac = () => ({ type: 'TOGGLE' });
 const reducer = (state, event) => {

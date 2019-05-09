@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Redux BootstrapIntegrationTest merges nested props 1`] = `
+Object {
+  "details": "meta",
+  "name": "key",
+  "value": "thirteen",
+}
+`;

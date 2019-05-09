@@ -16,6 +16,8 @@ import { Provider } from 'react-redux';
 import { REDUCER, POST_ENHANCER, ENHANCER, MIDDLEWARE, COMPOSER, HOC } from 'airglow';
 import lazyStore from './lazy.store';
 
+export { default as connect } from './connect';
+
 class StoreFactory {
   create(lookup) {
     this.store = lazyStore(getReducers(lookup), getEnhancers(lookup));

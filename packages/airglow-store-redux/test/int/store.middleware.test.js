@@ -11,10 +11,9 @@ governing permissions and limitations under the License.
 */
 
 import React from 'react';
-import { connect } from 'react-redux';
 import { mount } from 'enzyme';
 import Airglow, { MIDDLEWARE } from 'airglow';
-import ReduxStore from '../../src';
+import ReduxStore, { connect } from '../../src';
 
 let lastAction;
 let tree;

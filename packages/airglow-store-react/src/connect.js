@@ -18,9 +18,13 @@ export default (mapState = R.identity, mapHandlers = R.identity) => Container =>
   <StoreConsumer>
     {({ state, store }) => (
       <Container
-        {...props}
-        {...mapState(state)}
-        {...mapHandlers(store.dispatch)}
+        {...R.mergeDeepRight(
+          props,
+          R.mergeDeepRight(
+            mapState(state),
+            mapHandlers(store.dispatch)
+          )
+        )}
       />
     )}
   </StoreConsumer>

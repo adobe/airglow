@@ -2,38 +2,42 @@
 
 exports[`prefab value should return a selector 1`] = `
 Object {
-  "changeAction": [Function],
-  "defaultValue": "",
-  "doChange": [Function],
-  "doReset": [Function],
-  "prefabName": "pickle",
-  "reduce": [Function],
-  "resetAction": Object {
-    "meta": undefined,
-    "payload": Object {
-      "construct": "pickle",
+  "pickle": Object {
+    "changeAction": [Function],
+    "defaultValue": "",
+    "doChange": [Function],
+    "doReset": [Function],
+    "prefabName": "pickle",
+    "reduce": [Function],
+    "resetAction": Object {
+      "meta": undefined,
+      "payload": Object {
+        "construct": "pickle",
+      },
+      "type": "PREFAB_VALUE_RESET",
     },
-    "type": "PREFAB_VALUE_RESET",
+    "value": [Function],
   },
-  "value": [Function],
 }
 `;
 
 exports[`prefab value should set the defaultValue if provided 1`] = `
 Object {
-  "changeAction": [Function],
-  "defaultValue": "crisp",
-  "doChange": [Function],
-  "doReset": [Function],
-  "prefabName": "pickle",
-  "reduce": [Function],
-  "resetAction": Object {
-    "meta": undefined,
-    "payload": Object {
-      "construct": "pickle",
+  "pickle": Object {
+    "changeAction": [Function],
+    "defaultValue": "crisp",
+    "doChange": [Function],
+    "doReset": [Function],
+    "prefabName": "pickle",
+    "reduce": [Function],
+    "resetAction": Object {
+      "meta": undefined,
+      "payload": Object {
+        "construct": "pickle",
+      },
+      "type": "PREFAB_VALUE_RESET",
     },
-    "type": "PREFAB_VALUE_RESET",
+    "value": [Function],
   },
-  "value": [Function],
 }
 `;

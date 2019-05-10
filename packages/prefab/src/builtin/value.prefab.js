@@ -22,5 +22,5 @@ export default ({
   selectorInternal.defaultValue = defaultValue;
   selectorInternal.reduce = reduceValue;
 
-  return selectorInternal;
+  return { [name]: selectorInternal };
 };

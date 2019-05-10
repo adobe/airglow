@@ -10,9 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import Generate from './generate';
+import Generate, { registerProvider } from './generate';
 
 export { default as reducer } from './reducers';
 export * from './actions';
 export { default as selector } from './selector';
+export { registerProvider };
 export default Generate;

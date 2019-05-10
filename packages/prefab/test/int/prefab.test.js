@@ -12,42 +12,43 @@ governing permissions and limitations under the License.
 
 import { slice, call } from '@airglow/reducers';
 import { createStore } from 'redux';
-import { reducer, BOOTSTRAP_PREFAB } from '../../src/index';
-import countConstruct from './count.construct';
+import prefab, { reducer, BOOTSTRAP_PREFAB, registerProvider } from '../../src/index';
+import countPrefab, { doublePrefab } from './count.prefab';
+
+registerProvider('count', countPrefab);
 
 let store;
-let prefab;
+let prefabs;
 
 const select = selectorIn =>
   selectorIn(store.getState(), store.dispatch);
 
 describe('PrefabIntegrationTest', () => {
   beforeEach(() => {
-    prefab = {
-      counterA: countConstruct({ default: 21, name: 'counterA' }),
-      counterB: countConstruct({ name: 'counterB' })
-    };
+    prefabs = prefab({
+      counterA: { default: 21, type: 'count' },
+      counterB: { type: 'count' }
+    });
     store = createStore(call(
       slice('prefab').with(reducer)
     ));
     store.dispatch({
       type: BOOTSTRAP_PREFAB,
-      payload: prefab
+      payload: prefabs
     });
-    // selectorB = selector('counterB', );
   });
-  it('should correclty set up the store', function () {
+  fit('should correclty set up the store', function () {
     expect(store.getState()).toMatchSnapshot();
   });
   it('should select the default values from the store', function () {
-    expect(select(prefab.counterA()).value).toBe(21);
-    expect(select(prefab.counterB()).value).toBe(0);
+    expect(select(prefabs.counterA()).value).toBe(21);
+    expect(select(prefabs.counterB()).value).toBe(0);
   });
   it('should update the store on dispatch', function () {
-    select(prefab.counterA()).onIncrement(3);
-    select(prefab.counterA()).onIncrement(3);
-    select(prefab.counterB({ multiple: 3 })).onIncrement(2);
-    expect(select(prefab.counterA()).value).toBe(27);
-    expect(select(prefab.counterB({ multiple: 3 })).value).toBe(6);
+    select(prefabs.counterA()).onIncrement(3);
+    select(prefabs.counterA()).onIncrement(3);
+    select(prefabs.counterB({ multiple: 3 })).onIncrement(2);
+    expect(select(prefabs.counterA()).value).toBe(27);
+    expect(select(prefabs.counterB({ multiple: 3 })).value).toBe(6);
   });
 });

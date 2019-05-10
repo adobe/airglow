@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { mapObjIndexed, propOr, identity } from 'ramda';
+import * as R from 'ramda';
 
 import togglePrefab from './builtin/toggle.prefab';
 import valuePrefab from './builtin/value.prefab';
@@ -18,10 +18,20 @@ import listPrefab from './builtin/list.prefab';
 
 const providers = {};
 
-export default mapObjIndexed(
-  ({ type, ...options }, name) =>
-    propOr(identity, type, providers)({ name, ...options })
-);
+const getProvider = type => R.propOr(R.identity, type, providers);
+
+export default (config) => {
+  let prefabs = {};
+
+  R.forEachObjIndexed(
+    ({ type, ...options }, name) => {
+      const results = getProvider(type)({ name, ...options });
+      prefabs = { ...prefabs, ...results };
+    },
+    config
+  );
+  return prefabs;
+};
 
 export const registerProvider = (name, provider) => { providers[name] = provider; };
 

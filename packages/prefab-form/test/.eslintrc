@@ -1,0 +1,6 @@
+{
+
+  rules: {
+    prefer-arrow-callback: 0
+  }
+}

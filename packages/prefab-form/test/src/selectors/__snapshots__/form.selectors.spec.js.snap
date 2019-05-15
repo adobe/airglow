@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormSelectors exports data 1`] = `
+Object {
+  "currency": "dollas",
+}
+`;
+
+exports[`FormSelectors resets the form 1`] = `
+Array [
+  Object {
+    "construct": "moniesForm",
+    "type": "postReset2",
+  },
+]
+`;
+
+exports[`FormSelectors submits the form 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "construct": "moniesForm",
+      "value": undefined,
+    },
+    "type": "PREFAB_FORM_SUBMIT",
+  },
+]
+`;
+
+exports[`FormSelectors uses post reset actions 1`] = `
+Array [
+  Object {
+    "construct": "moniesForm",
+    "type": "postReset",
+  },
+]
+`;
+
+exports[`FormSelectors uses post reset actions 2`] = `
+Array [
+  Object {
+    "construct": "moniesForm",
+    "type": "onReset",
+  },
+]
+`;
+
+exports[`FormSelectors uses submit actions 1`] = `
+Array [
+  Object {
+    "construct": "moniesForm",
+    "type": "submit",
+  },
+]
+`;
+
+exports[`FormSelectors uses submit actions 2`] = `
+Array [
+  Object {
+    "construct": "moniesForm",
+    "type": "submit2",
+  },
+]
+`;
+
+exports[`FormSelectors uses submit actions 3`] = `Array []`;
+
+exports[`FormSelectors uses the fields handlers 1`] = `
+Array [
+  "onChange",
+  "newdata",
+]
+`;

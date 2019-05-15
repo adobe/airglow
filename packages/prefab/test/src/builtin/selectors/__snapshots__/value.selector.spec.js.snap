@@ -2,7 +2,6 @@
 
 exports[`value.selector should return the reset action 1`] = `
 Object {
-  "meta": undefined,
   "payload": Object {
     "construct": "pickleSearch",
   },
@@ -12,7 +11,6 @@ Object {
 
 exports[`value.selector should return the search action 1`] = `
 Object {
-  "meta": undefined,
   "payload": Object {
     "construct": "pickleSearch",
     "value": "zippy",
@@ -24,7 +22,6 @@ Object {
 exports[`value.selector should trigger a reset action 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": Object {
       "construct": "pickleSearch",
     },
@@ -36,7 +33,6 @@ Array [
 exports[`value.selector should trigger a search action 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": Object {
       "construct": "pickleSearch",
       "value": "bumpy",

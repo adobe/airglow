@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormPrefab generates prefabs for each field 1`] = `
+Object {
+  "pizzaForm": Object {
+    "autocorrect": "enabled",
+    "export": [Function],
+    "formName": "pizzaForm",
+    "handlers": [Function],
+    "isDirty": [Function],
+    "isInvalid": [Function],
+    "resetActions": Array [
+      Object {
+        "payload": Object {
+          "construct": "pizzaForm#pizza",
+          "value": undefined,
+        },
+        "type": "PREFAB_FORM_FIELD_RESET",
+      },
+      Object {
+        "payload": Object {
+          "construct": "pizzaForm#size",
+          "value": undefined,
+        },
+        "type": "PREFAB_FORM_FIELD_RESET",
+      },
+    ],
+    "state": [Function],
+    "type": "form",
+    "whenToValidate": "submit",
+  },
+  "pizzaForm#pizza": Object {
+    "autocorrect": "enabled",
+    "changeAction": [Function],
+    "defaultValue": "",
+    "error": [Function],
+    "externalName": "pizza",
+    "fieldName": "pizzaField",
+    "fieldType": "text",
+    "handlers": [Function],
+    "isDirty": [Function],
+    "isInvalid": [Function],
+    "name": "pizzaForm#pizza",
+    "reduce": [Function],
+    "resetAction": [Function],
+    "sourceSelector": null,
+    "state": [Function],
+    "value": [Function],
+    "whenToValidate": "submit",
+  },
+  "pizzaForm#size": Object {
+    "autocorrect": "enabled",
+    "changeAction": [Function],
+    "defaultValue": "",
+    "error": [Function],
+    "externalName": "size",
+    "fieldName": "sizeField",
+    "fieldType": "text",
+    "handlers": [Function],
+    "isDirty": [Function],
+    "isInvalid": [Function],
+    "name": "pizzaForm#size",
+    "reduce": [Function],
+    "resetAction": [Function],
+    "sourceSelector": null,
+    "state": [Function],
+    "value": [Function],
+    "whenToValidate": "submit",
+  },
+}
+`;
+
+exports[`FormPrefab generates prefabs for each field 2`] = `
+Object {
+  "autocorrect": "enabled",
+  "changeAction": [Function],
+  "defaultValue": "",
+  "error": [Function],
+  "externalName": "pizza",
+  "fieldName": "pizzaField",
+  "fieldType": "text",
+  "handlers": [Function],
+  "isDirty": [Function],
+  "isInvalid": [Function],
+  "name": "pizzaForm#pizza",
+  "reduce": [Function],
+  "resetAction": [Function],
+  "sourceSelector": null,
+  "state": [Function],
+  "value": [Function],
+  "whenToValidate": "submit",
+}
+`;

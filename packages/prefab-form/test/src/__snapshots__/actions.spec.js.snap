@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create a blur action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "pizza",
+    "value": undefined,
+  },
+  "type": "PREFAB_FORM_FIELD_BLUR",
+}
+`;
+
+exports[`should create a change action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "pizza",
+    "value": "meat",
+  },
+  "type": "PREFAB_FORM_FIELD_VALUE",
+}
+`;
+
+exports[`should create a focus action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "pizza",
+    "value": undefined,
+  },
+  "type": "PREFAB_FORM_FIELD_FOCUS",
+}
+`;

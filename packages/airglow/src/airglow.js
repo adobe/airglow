@@ -20,7 +20,7 @@ class Airglow extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.store = this.props.store ? this.props.store() : null;
-    this.engine = new Engine(this.store, this.props.plugins);
+    this.engine = new Engine(this.store, R.reverse(this.props.plugins || []));
 
     if (this.props.bootstrap) {
       this.engine.plugin(
@@ -36,7 +36,7 @@ class Airglow extends React.Component {
       (children, plugin) =>
         pluginReducers[plugin.type](plugin.callback, children),
       this.props.children,
-      getRenderPlugins(this.engine)
+      R.reverse(getRenderPlugins(this.engine))
     );
   }
 

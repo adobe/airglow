@@ -9,7 +9,6 @@ Array [
 
 exports[`list.selector should return the add action 1`] = `
 Object {
-  "meta": undefined,
   "payload": Object {
     "construct": "colorList",
     "value": "yellow",
@@ -20,7 +19,6 @@ Object {
 
 exports[`list.selector should return the remove action 1`] = `
 Object {
-  "meta": undefined,
   "payload": Object {
     "construct": "colorList",
     "value": "white",
@@ -31,7 +29,6 @@ Object {
 
 exports[`list.selector should return the remove at action 1`] = `
 Object {
-  "meta": undefined,
   "payload": Object {
     "construct": "colorList",
     "value": 2,
@@ -42,7 +39,6 @@ Object {
 
 exports[`list.selector should return the set action 1`] = `
 Object {
-  "meta": undefined,
   "payload": Object {
     "construct": "colorList",
     "value": "zippy",
@@ -54,7 +50,6 @@ Object {
 exports[`list.selector should trigger a remove action 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": Object {
       "construct": "colorList",
       "value": "yellow",
@@ -67,7 +62,6 @@ Array [
 exports[`list.selector should trigger a set action 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": Object {
       "construct": "colorList",
       "value": Array [
@@ -82,7 +76,6 @@ Array [
 exports[`list.selector should trigger an add action 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": Object {
       "construct": "colorList",
       "value": "green",

@@ -2,15 +2,12 @@
 
 exports[`addFunctionProp creates an action 1`] = `
 Object {
-  "meta": undefined,
-  "payload": undefined,
   "type": "MY_ACTION",
 }
 `;
 
 exports[`addFunctionProp passes in properties 1`] = `
 Object {
-  "meta": undefined,
   "payload": Object {
     "a": "b",
   },
@@ -31,7 +28,6 @@ Object {
 
 exports[`addFunctionProp uses a provided payload mapper 1`] = `
 Object {
-  "meta": undefined,
   "payload": Object {
     "a": 7,
     "b": 23,

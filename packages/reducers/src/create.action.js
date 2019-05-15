@@ -10,10 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-export default (type, payloadMapper, metaMapper) => (...args) => (
-  {
-    type,
-    payload: payloadMapper ? payloadMapper(...args) : args[0],
-    meta: metaMapper ? metaMapper(...args) : undefined
-  }
-);
+export default (type, payloadMapper, metaMapper) => (...args) => {
+  const action = { type };
+  const payload = payloadMapper ? payloadMapper(...args) : args[0];
+  const meta = metaMapper ? metaMapper(...args) : undefined;
+
+  if (payload) { action.payload = payload; }
+  if (meta) { action.meta = meta; }
+  return action;
+};

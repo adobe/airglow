@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrefabSagaIntegrationTest calls a provided submit saga 1`] = `
+Array [
+  Object {
+    "form": Object {
+      "errorActions": Array [
+        "error2",
+        "error",
+      ],
+      "formName": "favorites",
+      "successActions": Array [
+        Object {
+          "payload": Object {
+            "construct": "favorites#color",
+            "value": undefined,
+          },
+          "type": "PREFAB_FORM_FIELD_RESET",
+        },
+        "success2",
+        "success",
+      ],
+    },
+    "values": Object {
+      "color": "Purple!",
+    },
+  },
+]
+`;
+
+exports[`PrefabSagaIntegrationTest errors if invalid 1`] = `
+Object {
+  "construct": "favorites",
+  "type": "invalid",
+}
+`;
+
+exports[`PrefabSagaIntegrationTest errors if invalid 2`] = `
+Object {
+  "construct": "favorites",
+  "type": "invalid2",
+}
+`;
+
+exports[`PrefabSagaIntegrationTest submits if valid 1`] = `
+Object {
+  "form": Object {
+    "errorActions": Array [
+      "error2",
+      "error",
+    ],
+    "formName": "favorites",
+    "successActions": Array [
+      Object {
+        "payload": Object {
+          "construct": "favorites#color",
+          "value": undefined,
+        },
+        "type": "PREFAB_FORM_FIELD_RESET",
+      },
+      "success2",
+      "success",
+    ],
+  },
+  "type": "submit",
+  "values": Object {
+    "color": "Purple!",
+  },
+}
+`;
+
+exports[`PrefabSagaIntegrationTest submits if valid 2`] = `
+Object {
+  "form": Object {
+    "errorActions": Array [
+      "error2",
+      "error",
+    ],
+    "formName": "favorites",
+    "successActions": Array [
+      Object {
+        "payload": Object {
+          "construct": "favorites#color",
+          "value": undefined,
+        },
+        "type": "PREFAB_FORM_FIELD_RESET",
+      },
+      "success2",
+      "success",
+    ],
+  },
+  "type": "submit2",
+  "values": Object {
+    "color": "Purple!",
+  },
+}
+`;

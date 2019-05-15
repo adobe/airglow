@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomBundleItems adds checked for checkboxes 1`] = `
+Object {
+  "checked": true,
+}
+`;

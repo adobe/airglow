@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`blurReducer marks the field blurred 1`] = `
+Object {
+  "construct": Object {},
+  "store": Object {
+    "hasBlurred": true,
+    "value": "sausage",
+  },
+}
+`;
+
+exports[`blurReducer runs autocorrects on the field 1`] = `
+Object {
+  "construct": Object {
+    "autocorrect": "enabled",
+    "fieldType": "number",
+    "max": 20,
+  },
+  "store": Object {
+    "hasBlurred": true,
+    "value": 20,
+  },
+}
+`;

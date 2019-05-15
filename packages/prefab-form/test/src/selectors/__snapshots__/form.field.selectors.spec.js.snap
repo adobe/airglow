@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormFieldSelectors creates a change action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "size",
+    "value": 78,
+  },
+  "type": "PREFAB_FORM_FIELD_VALUE",
+}
+`;
+
+exports[`FormFieldSelectors handlers fills out the bundle 1`] = `
+Object {
+  "dirty": true,
+  "error": "error.number.max",
+  "invalidMsg": "error.number.max",
+  "required": true,
+  "value": 29,
+}
+`;
+
+exports[`FormFieldSelectors handlers triggers a blur event 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "construct": "size",
+      "value": undefined,
+    },
+    "type": "PREFAB_FORM_FIELD_BLUR",
+  },
+]
+`;
+
+exports[`FormFieldSelectors handlers triggers a change event 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "construct": "size",
+      "value": 32,
+    },
+    "type": "PREFAB_FORM_FIELD_VALUE",
+  },
+]
+`;
+
+exports[`FormFieldSelectors handlers triggers a focus event 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "construct": "size",
+      "value": undefined,
+    },
+    "type": "PREFAB_FORM_FIELD_FOCUS",
+  },
+]
+`;
+
+exports[`FormFieldSelectors handlers triggers a reset event 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "construct": "size",
+      "value": undefined,
+    },
+    "type": "PREFAB_FORM_FIELD_RESET",
+  },
+]
+`;

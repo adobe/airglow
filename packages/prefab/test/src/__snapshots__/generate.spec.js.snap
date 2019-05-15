@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generate prefab handles multiple results from a construct 1`] = `
+Object {
+  "nameA": [Function],
+  "nameB": [Function],
+  "valueA": [Function],
+  "valueB": [Function],
+}
+`;
+
+exports[`generate prefab should process provided configuration 1`] = `
+Object {
+  "isOpen": Object {
+    "closeAction": Object {
+      "payload": Object {
+        "construct": "isOpen",
+      },
+      "type": "PREFAB_TOGGLE_OFF",
+    },
+    "defaultValue": false,
+    "doClose": [Function],
+    "doHide": [Function],
+    "doOpen": [Function],
+    "doSet": [Function],
+    "doShow": [Function],
+    "doToggle": [Function],
+    "doTurnOff": [Function],
+    "doTurnOn": [Function],
+    "doUnset": [Function],
+    "hideAction": Object {
+      "payload": Object {
+        "construct": "isOpen",
+      },
+      "type": "PREFAB_TOGGLE_OFF",
+    },
+    "isClosed": [Function],
+    "isHidden": [Function],
+    "isNotSet": [Function],
+    "isOff": [Function],
+    "isOn": [Function],
+    "isOpen": [Function],
+    "isSet": [Function],
+    "isVisible": [Function],
+    "openAction": Object {
+      "payload": Object {
+        "construct": "isOpen",
+      },
+      "type": "PREFAB_TOGGLE_ON",
+    },
+    "reduce": [Function],
+    "setAction": Object {
+      "payload": Object {
+        "construct": "isOpen",
+      },
+      "type": "PREFAB_TOGGLE_ON",
+    },
+    "showAction": Object {
+      "payload": Object {
+        "construct": "isOpen",
+      },
+      "type": "PREFAB_TOGGLE_ON",
+    },
+    "toggleAction": Object {
+      "payload": Object {
+        "construct": "isOpen",
+      },
+      "type": "PREFAB_TOGGLE_SWITCH",
+    },
+    "toggleName": "isOpen",
+    "turnOffAction": Object {
+      "payload": Object {
+        "construct": "isOpen",
+      },
+      "type": "PREFAB_TOGGLE_OFF",
+    },
+    "turnOnAction": Object {
+      "payload": Object {
+        "construct": "isOpen",
+      },
+      "type": "PREFAB_TOGGLE_ON",
+    },
+    "unsetAction": Object {
+      "payload": Object {
+        "construct": "isOpen",
+      },
+      "type": "PREFAB_TOGGLE_OFF",
+    },
+  },
+  "value": Object {
+    "changeAction": [Function],
+    "defaultValue": "test",
+    "doChange": [Function],
+    "doReset": [Function],
+    "prefabName": "value",
+    "reduce": [Function],
+    "resetAction": Object {
+      "payload": Object {
+        "construct": "value",
+      },
+      "type": "PREFAB_VALUE_RESET",
+    },
+    "value": [Function],
+  },
+}
+`;

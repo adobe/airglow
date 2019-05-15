@@ -46,5 +46,5 @@ export default ({ name, ...options }) => {
     selectorInternal[k] = v;
   }, options);
   selectorInternal.reduce = countReducer;
-  return selectorInternal;
+  return { [name]: selectorInternal };
 };

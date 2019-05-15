@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`focusReducer marks the field blurred 1`] = `
+Object {
+  "construct": Object {},
+  "store": Object {
+    "hasFocussed": true,
+    "value": "sausage",
+  },
+}
+`;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormPrefabIntegration exports correctly 1`] = `
+Object {
+  "pizza": "cheese",
+}
+`;
+
+exports[`FormPrefabIntegration should correctly select the initial values 1`] = `
+Object {
+  "pizzaField": Object {
+    "dirty": false,
+    "error": false,
+    "invalidMsg": false,
+    "required": false,
+    "value": "cheese",
+  },
+  "sizeField": Object {
+    "dirty": false,
+    "error": false,
+    "invalidMsg": false,
+    "required": false,
+    "value": 3,
+  },
+}
+`;

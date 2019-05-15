@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormFieldPrefabIntegration should validate 1`] = `
+Object {
+  "dirty": true,
+  "error": false,
+  "invalidMsg": "error.z",
+  "required": false,
+  "value": "meatz",
+}
+`;
+
+exports[`FormFieldPrefabIntegration should validate 2`] = `
+Object {
+  "dirty": true,
+  "error": "error.z",
+  "invalidMsg": "error.z",
+  "required": false,
+  "value": "meatz",
+}
+`;

@@ -1,0 +1,30 @@
+{
+  "name": "@airglow/prefab-form",
+  "description": "Prefabs for common form elements",
+  "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/airglow.git",
+    "directory": "packages/prefab-form"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Adobe Systems",
+  "license": "Apache-2.0",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "@airglow/reducers": "^0.1.2",
+    "@airglow/prefab": "^0.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel src --out-dir dist --root-mode upward"
+  },
+  "main": "dist/index.js"
+}

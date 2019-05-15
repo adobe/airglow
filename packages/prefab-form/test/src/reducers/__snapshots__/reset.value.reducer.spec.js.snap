@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`valueChangeReducer reset the value 1`] = `
+Object {
+  "construct": Object {
+    "fieldType": "number",
+  },
+  "store": Object {},
+}
+`;

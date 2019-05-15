@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`valueChangeReducer performs an autocorrect 1`] = `
+Object {
+  "construct": Object {
+    "autocorrect": "immediate",
+    "fieldType": "number",
+    "max": 20,
+  },
+  "store": Object {
+    "value": 20,
+  },
+}
+`;
+
+exports[`valueChangeReducer updates the value 1`] = `
+Object {
+  "construct": Object {},
+  "store": Object {
+    "value": "zipper",
+  },
+}
+`;

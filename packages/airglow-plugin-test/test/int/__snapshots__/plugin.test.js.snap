@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AirglowTestIntegrationTest should correctly get the last event 1`] = `
+Object {
+  "type": "another",
+}
+`;
+
+exports[`AirglowTestIntegrationTest should keep track of all the dispatches 1`] = `
+Array [
+  Object {
+    "type": "REACT.STORE.INITIALIZE",
+  },
+  Object {
+    "type": "testEvent",
+  },
+  Object {
+    "type": "another",
+  },
+]
+`;

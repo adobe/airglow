@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TestReducer should push the event onto the list 1`] = `
+Array [
+  "First One",
+  "Second One",
+]
+`;

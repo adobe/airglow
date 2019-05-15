@@ -3,7 +3,6 @@
 exports[`AirglowPrefabPlugin should send the prefab content on bootstrap 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": "new.prefab.content",
     "type": "BOOTSTRAP_PREFAB",
   },

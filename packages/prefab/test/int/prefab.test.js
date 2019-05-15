@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 import { slice, call } from '@airglow/reducers';
 import { createStore } from 'redux';
 import prefab, { reducer, BOOTSTRAP_PREFAB, registerProvider } from '../../src/index';
-import countPrefab, { doublePrefab } from './count.prefab';
+import countPrefab from './count.prefab';
 
 registerProvider('count', countPrefab);
 
@@ -37,7 +37,7 @@ describe('PrefabIntegrationTest', () => {
       payload: prefabs
     });
   });
-  fit('should correclty set up the store', function () {
+  it('should correclty set up the store', function () {
     expect(store.getState()).toMatchSnapshot();
   });
   it('should select the default values from the store', function () {

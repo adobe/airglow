@@ -10,7 +10,6 @@ Object {
     "prefabName": "pickle",
     "reduce": [Function],
     "resetAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
@@ -31,7 +30,6 @@ Object {
     "prefabName": "pickle",
     "reduce": [Function],
     "resetAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },

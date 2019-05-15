@@ -4,7 +4,6 @@ exports[`prefabToggle should return a selector 1`] = `
 Object {
   "pickle": Object {
     "closeAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
@@ -21,7 +20,6 @@ Object {
     "doTurnOn": [Function],
     "doUnset": [Function],
     "hideAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
@@ -36,7 +34,6 @@ Object {
     "isSet": [Function],
     "isVisible": [Function],
     "openAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
@@ -44,21 +41,18 @@ Object {
     },
     "reduce": [Function],
     "setAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
       "type": "PREFAB_TOGGLE_ON",
     },
     "showAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
       "type": "PREFAB_TOGGLE_ON",
     },
     "toggleAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
@@ -66,21 +60,18 @@ Object {
     },
     "toggleName": "pickle",
     "turnOffAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
       "type": "PREFAB_TOGGLE_OFF",
     },
     "turnOnAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
       "type": "PREFAB_TOGGLE_ON",
     },
     "unsetAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
@@ -94,7 +85,6 @@ exports[`prefabToggle should set the defaultValue if provided 1`] = `
 Object {
   "pickle": Object {
     "closeAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
@@ -111,7 +101,6 @@ Object {
     "doTurnOn": [Function],
     "doUnset": [Function],
     "hideAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
@@ -126,7 +115,6 @@ Object {
     "isSet": [Function],
     "isVisible": [Function],
     "openAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
@@ -134,21 +122,18 @@ Object {
     },
     "reduce": [Function],
     "setAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
       "type": "PREFAB_TOGGLE_ON",
     },
     "showAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
       "type": "PREFAB_TOGGLE_ON",
     },
     "toggleAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
@@ -156,21 +141,18 @@ Object {
     },
     "toggleName": "pickle",
     "turnOffAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
       "type": "PREFAB_TOGGLE_OFF",
     },
     "turnOnAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },
       "type": "PREFAB_TOGGLE_ON",
     },
     "unsetAction": Object {
-      "meta": undefined,
       "payload": Object {
         "construct": "pickle",
       },

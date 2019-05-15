@@ -22,11 +22,11 @@ exports[`airglow should append component plugins 1`] = `
             Test
           </div>
           <div>
-            Smokey
+            Version 2.1
           </div>
         </div>
         <div>
-          Version 2.1
+          Smokey
         </div>
       </div>
     </div>
@@ -52,13 +52,13 @@ exports[`airglow should render in order 1`] = `
                 Test
               </div>
               <div>
-                Smokey
+                Version 2.1
               </div>
             </div>
           </div>
         </component>
         <div>
-          Version 2.1
+          Smokey
         </div>
       </div>
     </div>

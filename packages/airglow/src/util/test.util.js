@@ -29,8 +29,8 @@ export const renderAirglow = (children, props) => {
   tree.airglow = tree;
   tree.store = tree.find('Airglow').instance().engine.getStore();
   if (tree.store) {
-    tree.dispatch = tree.store.dispatch;
-    tree.getState = tree.store.getState;
+    tree.dispatch = tree.store.dispatch.bind(tree.store);
+    tree.getState = tree.store.getState.bind(tree.store);
   }
   return tree;
 };

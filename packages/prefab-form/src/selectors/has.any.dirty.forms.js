@@ -10,12 +10,23 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { registerProvider } from '@airglow/prefab';
-import formField from './form.field.prefab';
-import form from './form.prefab';
+//
+// Given a provided state, see if any existing umbra form is currently dirty
+//
 
-export * from './actions';
-export { default as hasAnyDirtyForms } from './selectors/has.any.dirty.forms';
+import * as R from 'ramda';
 
-registerProvider('formField', formField);
-registerProvider('form', form);
+const isUmbraForm = R.pathEq(['construct', 'type'], 'form');
+
+const isFormDirty = state => form => form.construct.isDirty(state);
+const pullFormsFromState = R.pipe(
+  R.prop('prefab'),
+  R.filter(isUmbraForm),
+  R.values
+);
+
+export default (state) => {
+  const forms = pullFormsFromState(state);
+  const dirty = R.filter(isFormDirty(state), forms);
+  return dirty.length ? dirty : false;
+};

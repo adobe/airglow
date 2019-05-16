@@ -1,7 +1,7 @@
 {
   "name": "@airglow/prefab-map",
   "description": "Prefabs for map implementations",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -16,8 +16,8 @@
     "dist/"
   ],
   "dependencies": {
-    "@airglow/prefab": "^0.2.0",
-    "@airglow/reducers": "^0.2.0",
+    "@airglow/prefab": "^0.3.0",
+    "@airglow/reducers": "^0.3.0",
     "reselect": "^3.0.0"
   },
   "devDependencies": {

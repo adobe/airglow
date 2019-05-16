@@ -1,6 +1,6 @@
 {
   "name": "@airglow/store-redux",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -17,12 +17,12 @@
     "dist/"
   ],
   "peerDependencies": {
-    "redux": "^4.0.1",
-    "react-redux": "^7.0.3"
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1"
   },
   "dependencies": {
-    "@airglow/reducers": "^0.2.0",
-    "airglow": "^0.2.0"
+    "@airglow/reducers": "^0.3.0",
+    "airglow": "^0.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4"

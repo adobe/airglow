@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create a button zoom action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "myMap",
+    "size": Object {
+      "size": -1,
+    },
+  },
+  "type": "prefab.map.button.zoom",
+}
+`;
+
+exports[`should create a position action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "myMap",
+    "latitide": 3,
+    "longitude": -5,
+  },
+  "type": "prefab.map.change.position",
+}
+`;
+
+exports[`should create a toggle action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "myMap",
+  },
+  "type": "prefab.map.toggle.mode",
+}
+`;
+
+exports[`should create a zoom action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "myMap",
+    "zoom": 3,
+  },
+  "type": "prefab.map.zoom",
+}
+`;

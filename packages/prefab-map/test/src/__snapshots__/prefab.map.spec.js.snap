@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prefabMap should return the map 1`] = `
+Object {
+  "pickle": Object {
+    "defaultZoom": undefined,
+    "mapName": "pickle",
+    "mode": [Function],
+    "position": [Function],
+    "positionAction": [Function],
+    "reduce": [Function],
+    "toggleModeAction": [Function],
+    "zoom": [Function],
+    "zoomAction": [Function],
+    "zoomInAction": [Function],
+    "zoomOutAction": [Function],
+  },
+}
+`;
+
+exports[`prefabMap should set the defaultZoom if provided 1`] = `
+Object {
+  "pickle": Object {
+    "defaultZoom": 7,
+    "mapName": "pickle",
+    "mode": [Function],
+    "position": [Function],
+    "positionAction": [Function],
+    "reduce": [Function],
+    "toggleModeAction": [Function],
+    "zoom": [Function],
+    "zoomAction": [Function],
+    "zoomInAction": [Function],
+    "zoomOutAction": [Function],
+  },
+}
+`;

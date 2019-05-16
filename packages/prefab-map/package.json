@@ -1,0 +1,31 @@
+{
+  "name": "@airglow/prefab-map",
+  "description": "Prefabs for map implementations",
+  "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/airglow.git",
+    "directory": "packages/prefab-map"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Adobe Systems",
+  "license": "Apache-2.0",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "@airglow/prefab": "^0.2.0",
+    "@airglow/reducers": "^0.2.0",
+    "reselect": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4"
+  },
+  "scripts": {
+    "build": "babel src --out-dir _temp",
+    "postbuild": "rm -rf dist && mv _temp dist"
+  },
+  "main": "dist/index.js"
+}

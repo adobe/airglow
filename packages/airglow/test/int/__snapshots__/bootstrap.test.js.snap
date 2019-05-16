@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Airglow BootstrapIntegrationTest should dispatch any mount actions 1`] = `
+Array [
+  Object {
+    "type": "test",
+  },
+]
+`;

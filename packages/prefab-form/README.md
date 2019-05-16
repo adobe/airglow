@@ -114,6 +114,7 @@ export default prefab({
 The a FormField prefab provdies a bunch of different selectors you can pass into your views:
 
 | Selector | Input | Description |
+| -------- | ----- | ----------- |
 | value | state | Returns the current value for the field. |
 | error | state | Returns an error if the data is invalid and the __whenToValidate__ event has triggered.
 | isInvalid | state | Is the data currently invalid (reguardless of the __whenToValidate__ flag)
@@ -179,6 +180,7 @@ export default prefab({
 The Form provides a few selectors that map all of the child selectors:
 
 | Selector | Input | Description |
+| -------- | ----- | ----------- |
 | state | state | returns the full state of all the form's fields
 | handlers | dispatch | returns all the handlers of all the form's fields
 | export | state | prepares data for an external service, listing all the current values

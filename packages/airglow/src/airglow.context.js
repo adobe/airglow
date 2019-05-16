@@ -21,6 +21,14 @@ export class AirglowWrapper extends React.Component {
     this.context.bootstrap(this.props.config);
   }
 
+  componentDidMount() {
+    const { mountActions } = this.props.config;
+    if (mountActions) {
+      mountActions.forEach(a => this.context.dispatch(a));
+    }
+  }
+
+
   render() {
     return this.props.children;
   }

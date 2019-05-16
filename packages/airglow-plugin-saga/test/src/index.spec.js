@@ -81,7 +81,8 @@ describe('coronaSagaPlugin', () => {
     const bootstrap = getCall(BOOTSTRAP_MODULE);
     bootstrap(toStrap);
 
-    expect(middleware.run.firstCall.args[0]).toEqual(['x', 'y', 'z']);
+    expect(middleware.run.firstCall.args[0]).toEqual('x');
+    expect(middleware.run.secondCall.args[0]).toEqual('y');
   });
 
   it('doesnt bootstrap if null sagas', function () {

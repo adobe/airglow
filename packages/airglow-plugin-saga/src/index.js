@@ -32,5 +32,6 @@ const sagaFeature = middleware => lookup =>
 
 const bootstrapSagas = middleware => ({ sagas }) => {
   if (!sagas) { return; }
-  middleware.run(sagas);
+  const runSagas = Array.isArray(sagas) ? sagas : [sagas];
+  runSagas.forEach(saga => middleware.run(saga));
 };

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`buttonZoomReducer clamps the zoom level 1`] = `
+Object {
+  "construct": Object {
+    "defaultZoom": 8,
+  },
+  "store": Object {
+    "zoom": 18,
+  },
+}
+`;
+
+exports[`buttonZoomReducer zooms of a default value 1`] = `
+Object {
+  "store": Object {
+    "zoom": 3,
+  },
+}
+`;
+
+exports[`buttonZoomReducer zooms off the provided default 1`] = `
+Object {
+  "construct": Object {
+    "defaultZoom": 8,
+  },
+  "store": Object {
+    "zoom": 9,
+  },
+}
+`;
+
+exports[`zoomReducer sets the zoom value 1`] = `
+Object {
+  "store": Object {
+    "zoom": 7,
+  },
+}
+`;

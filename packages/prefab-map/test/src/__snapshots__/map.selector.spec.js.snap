@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mapSelector builds a position action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "myMap",
+    "latitude": 12,
+    "longitude": -3,
+  },
+  "type": "prefab.map.change.position",
+}
+`;
+
+exports[`mapSelector builds a toggle mode action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "myMap",
+  },
+  "type": "prefab.map.toggle.mode",
+}
+`;
+
+exports[`mapSelector builds a zoom action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "myMap",
+    "zoom": 3,
+  },
+  "type": "prefab.map.change.position",
+}
+`;
+
+exports[`mapSelector builds a zoom in action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "myMap",
+    "size": 1,
+  },
+  "type": "prefab.map.button.zoom",
+}
+`;
+
+exports[`mapSelector builds a zoom out action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "myMap",
+    "size": -1,
+  },
+  "type": "prefab.map.button.zoom",
+}
+`;

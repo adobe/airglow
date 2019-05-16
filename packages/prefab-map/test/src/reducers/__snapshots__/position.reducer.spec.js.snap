@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`positionReducer sets the position 1`] = `
+Object {
+  "store": Object {
+    "position": Array [
+      23,
+      34,
+    ],
+  },
+}
+`;

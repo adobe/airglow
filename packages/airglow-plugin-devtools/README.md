@@ -7,7 +7,7 @@ An plugin that adds the [Redux DevTools UI](https://github.com/gaearon/redux-dev
 Simply add the plugin when you are setting up your Airglow instance:
 
 ```
-import devtoolPlugin from '@nebula/corona-devtools-plugin';
+import devtoolPlugin from '@airglow/plugin-devtools';
 
 const App = () => (
   <Airglow plugins={{

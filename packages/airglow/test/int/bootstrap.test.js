@@ -15,8 +15,10 @@ import { mount } from 'enzyme';
 import Airglow, {
   BOOTSTRAP_MODULE, BOOTSTRAP_PLUGIN, AirglowWrapper
 } from '../../src';
+import { fakeStore } from '../../src/util/test.util';
 
 let diamonds;
+let tree;
 
 const plugin = (engine) => {
   engine.plugin(BOOTSTRAP_PLUGIN, () => {
@@ -29,14 +31,16 @@ const plugin = (engine) => {
 
 const bootstrapConfig = {
   name: 'bellHopper',
-  diamond: 13
+  diamond: 13,
+  mountActions: [{ type: 'test' }]
 };
 
 describe('Airglow BootstrapIntegrationTest', () => {
   beforeEach(() => {
     diamonds = 0;
-    mount(
+    tree = mount(
       <Airglow
+        store={fakeStore}
         plugins={[plugin]}
       >
         <AirglowWrapper
@@ -49,5 +53,9 @@ describe('Airglow BootstrapIntegrationTest', () => {
   });
   it('should use the plugins bootstrap function', () => {
     expect(diamonds).toBe(30);
+  });
+  it('should dispatch any mount actions', () => {
+    const store = tree.find('Airglow').instance().engine.getStore();
+    expect(store.dispatch.getCall(0).args).toMatchSnapshot();
   });
 });

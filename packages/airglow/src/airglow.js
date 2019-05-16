@@ -44,7 +44,10 @@ class Airglow extends React.Component {
     const Renderer = this.props.renderer || AirglowProvider;
     return (
       <Renderer
-        value={{ bootstrap: (...args) => this.engine.bootstrapModule(...args) }}
+        value={{
+          bootstrap: (...args) => this.engine.bootstrapModule(...args),
+          dispatch: action => this.engine.getStore().dispatch(action)
+        }}
       >
         {this.renderChildren()}
       </Renderer>

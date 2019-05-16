@@ -190,10 +190,14 @@ The Form provides a few selectors that map all of the child selectors:
 
 One note on export: all field will be included in the resulting object. If some fields are only for the local view, you may use the `local: true`, configuration option on that Form Field and it will be omitted from exports.
 
+### hasAnyDirty
 
+There is a utility that let's you see if there are any dirty forms anywhere in the system. This is useful for latching onto browser navigation events and prompt with a "Unsaved Data! Are you sure want to leave?" sort of dialog.
 
+```js
+import { hasAnyDirtyForms } from '@airglow/prefab-form';
 
-
-
-
-
+if (hasAnyDirtyForms(state)) {
+  console.alert("Unsaved Data! Are you sure want to leave?");
+}
+```

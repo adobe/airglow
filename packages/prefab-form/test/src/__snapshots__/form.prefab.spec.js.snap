@@ -9,7 +9,7 @@ Object {
       "pizzaField": Object {
         "autocorrect": "enabled",
         "changeAction": [Function],
-        "defaultValue": "",
+        "defaultValue": undefined,
         "error": [Function],
         "externalName": "pizza",
         "fieldName": "pizzaField",
@@ -28,7 +28,7 @@ Object {
       "sizeField": Object {
         "autocorrect": "enabled",
         "changeAction": [Function],
-        "defaultValue": "",
+        "defaultValue": undefined,
         "error": [Function],
         "externalName": "size",
         "fieldName": "sizeField",
@@ -72,7 +72,7 @@ Object {
   "pizzaForm#pizza": Object {
     "autocorrect": "enabled",
     "changeAction": [Function],
-    "defaultValue": "",
+    "defaultValue": undefined,
     "error": [Function],
     "externalName": "pizza",
     "fieldName": "pizzaField",
@@ -91,7 +91,7 @@ Object {
   "pizzaForm#size": Object {
     "autocorrect": "enabled",
     "changeAction": [Function],
-    "defaultValue": "",
+    "defaultValue": undefined,
     "error": [Function],
     "externalName": "size",
     "fieldName": "sizeField",
@@ -114,7 +114,7 @@ exports[`FormPrefab generates prefabs for each field 2`] = `
 Object {
   "autocorrect": "enabled",
   "changeAction": [Function],
-  "defaultValue": "",
+  "defaultValue": undefined,
   "error": [Function],
   "externalName": "pizza",
   "fieldName": "pizzaField",

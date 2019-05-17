@@ -15,15 +15,17 @@ import { getConstruct, getStore } from './select.store.paths';
 const ALWAYS = 'always';
 const FOCUS  = 'focus';
 const BLUR   = 'blur';
+const SUBMIT  = 'submit';
 const NEVER  = 'never';
 
 export default (name, state) => {
   const { whenToValidate = NEVER } = getConstruct(name)(state);
-  const { hasFocussed, hasBlurred } = getStore(name)(state);
+  const { hasFocussed, hasBlurred, hasSubmit } = getStore(name)(state);
 
   if (typeof whenToValidate === 'function') { return whenToValidate(state); }
   if (whenToValidate === ALWAYS) { return true; }
-  if (whenToValidate === FOCUS) { return hasFocussed || hasBlurred; }
-  if (whenToValidate === BLUR) { return hasBlurred; }
+  if (whenToValidate === SUBMIT) { return hasSubmit; }
+  if (whenToValidate === FOCUS) { return hasSubmit || hasFocussed || hasBlurred; }
+  if (whenToValidate === BLUR) { return hasSubmit || hasBlurred; }
   return false;
 };

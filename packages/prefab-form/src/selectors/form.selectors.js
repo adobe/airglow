@@ -35,21 +35,27 @@ const onResetHandler = (fields, config) =>
     );
   };
 
-const onSubmitHandler = ({ name, submitAction, submitActions = [] }) =>
+const onSubmitHandler = (fields, { name, submitAction, submitActions = [] }) =>
   dispatch => (e) => {
     if (e && e.preventDefault) { e.preventDefault(); }
     dispatch(submit(name));
 
     if (submitAction) { dispatch(submitAction(name)); }
     R.forEach(action => dispatch(action(name)), submitActions);
+
+    R.forEachObjIndexed(
+      field => dispatch(field.submitAction(name)),
+      fields
+    );
   };
 
 const makeExport = (fields, { localKeys = [] }) => (state) => {
   const reduced = {};
   R.forEachObjIndexed(
     (field) => {
-      if (localKeys.indexOf(field.externalName)) {
-        reduced[field.externalName] = field.value(state);
+      const value = field.value(state);
+      if (localKeys.indexOf(field.externalName) && value !== undefined) {
+        reduced[field.externalName] = value;
       }
     },
     fields
@@ -62,7 +68,7 @@ const makeState = fields => state =>
 
 const makeHandlers = (fields, config) => dispatch => ({
   onReset: onResetHandler(fields, config)(dispatch),
-  onSubmit: onSubmitHandler(config)(dispatch),
+  onSubmit: onSubmitHandler(fields, config)(dispatch),
   ...R.mapObjIndexed(field => field.handlers(dispatch), fields)
 });
 

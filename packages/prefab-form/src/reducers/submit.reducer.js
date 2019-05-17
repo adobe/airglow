@@ -10,18 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { call } from '@airglow/reducers';
-import * as T from '../actions';
-import valueChangeReducer from './value.change.reducer';
-import blurReducer from './blur.reducer';
-import focusReducer from './focus.reducer';
-import submitReducer from './submit.reducer';
-import resetReducer from './reset.value.reducer';
+import * as R from 'ramda';
 
-export default call(
-  call(valueChangeReducer).for(T.VALUE_CHANGE),
-  call(blurReducer).for(T.BLUR),
-  call(focusReducer).for(T.FOCUS),
-  call(submitReducer).for(T.FIELD_SUBMIT),
-  call(resetReducer).for(T.RESET)
-);
+const submitPath = ['store', 'hasSubmit'];
+
+export default state =>
+  R.assocPath(submitPath, true, state);

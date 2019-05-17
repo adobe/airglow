@@ -26,6 +26,7 @@ describe('FormSelectors', () => {
             onReset: () => d('onReset')
           }),
           resetAction: construct => ({ construct, type: 'onReset' }),
+          submitAction: construct => ({ construct, type: 'onSubmit' }),
           value: data => data.v,
           state: data => ({ value: data.v }),
           isInvalid: data => data.invalid,
@@ -37,6 +38,7 @@ describe('FormSelectors', () => {
             onChange: v => d('onChange', v),
             onReset: () => d('onReset')
           }),
+          submitAction: construct => ({ construct, type: 'onSubmit' }),
           resetAction: construct => ({ construct, type: 'onReset' }),
           value: data => data.c,
           state: data => ({ value: data.c }),
@@ -100,6 +102,9 @@ describe('FormSelectors', () => {
     expect(dispatch.getCall(1).args).toMatchSnapshot();
     expect(dispatch.getCall(2).args).toMatchSnapshot();
     expect(prevent.getCall(0).args).toMatchSnapshot();
+
+    expect(dispatch.getCall(3).args).toMatchSnapshot();
+    expect(dispatch.getCall(4).args).toMatchSnapshot();
   });
 
   it('exports data', () => {

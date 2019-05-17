@@ -12,10 +12,10 @@ governing permissions and limitations under the License.
 
 import selector from '../../../src/selectors/select.should.validate';
 
-const makeState = (whenToValidate, hasFocussed, hasBlurred) => ({
+const makeState = (whenToValidate, hasFocussed, hasBlurred, hasSubmit) => ({
   prefab: { zipper: {
     construct: { whenToValidate },
-    store: { hasFocussed, hasBlurred }
+    store: { hasFocussed, hasBlurred, hasSubmit }
   } }
 });
 
@@ -37,5 +37,8 @@ describe('SelectShouldValidate', () => {
   });
   it('should validate on blur when blur', () => {
     expect(selector('zipper', makeState('blur', false, true))).toBe(true);
+  });
+  it('should validate on submit when submit', () => {
+    expect(selector('zipper', makeState('submit', false, false, true))).toBe(true);
   });
 });

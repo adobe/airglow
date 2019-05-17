@@ -29,9 +29,9 @@ export default R.curry((name, state) => {
     prevalidate = R.identity
   } = getConstruct(name)(state);
 
-  const value = prevalidate(valueIn);
+  const value = prevalidate(valueIn, state);
 
   if (required && isNull(value)) { return REQUIRED_ERROR; }
 
-  return validator(value) || customValidation(R.path([ROOT, name], state), value);
+  return validator(value, state) || customValidation(R.path([ROOT, name], state), value);
 });

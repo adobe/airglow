@@ -28,7 +28,7 @@ const uriRegex = new RegExp('^(https?:\\/\\/)?' // protocol
 const isLength = length => value => !value || value.length === length;
 const isMaxLength = max => value => !value || value.length <= max;
 const isMinLength = min => value => !value || value.length >= min;
-const matches = regex => value => !value || value.match && value.match(regex);
+const matches = regex => value => !value || (value.match && value.match(regex));
 const isAlphaNum = matches(/^[a-zA-Z0-9_]*$/);
 const isEmail = matches(emailRegex);
 const isIP = matches(ipRegex);

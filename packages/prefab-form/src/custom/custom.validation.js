@@ -26,19 +26,6 @@ const doValidate = R.curry(({
 }, value) => {
   const validators = [];
 
-  /*
-  if (min) { schema = schema.min(min); }
-  if (max) { schema = schema.max(max); }
-  if (length) { schema = schema.length(length); }
-  if (regex) { schema = schema.regex(regex); }
-
-
-  if (fieldType === 'email') { schema = schema.email(); }
-  if (fieldType === 'ip') { schema = schema.ip(); }
-  if (fieldType === 'uri') { schema = schema.uri(); }
-
-  */
-
   if (fieldType === 'number') {
     validators.push(V.number);
     if (min) { validators.push(V.min(min)); }
@@ -47,7 +34,7 @@ const doValidate = R.curry(({
     if (less) { validators.push(V.less(less)); }
     if (integer) { validators.push(V.integer); }
     if (precision) { validators.push(V.precision(precision)); }
-  } else {
+  } else if (fieldType !== 'blob') {
     validators.push(V.string);
     if (min) { validators.push(V.minLength(min)); }
     if (max) { validators.push(V.maxLength(max)); }
@@ -65,28 +52,6 @@ const doValidate = R.curry(({
   const error = R.find(v => v(value))(validators);
   return error ? error(value) : false;
 });
-
-/*
-const number = R.curry(({
-  min,
-  max,
-  greater,
-  less,
-  integer,
-  precision
-}, value) => {
-  let schema = Joi.number();
-
-  if (min) { schema = schema.min(min); }
-  if (max) { schema = schema.max(max); }
-  if (greater) { schema = schema.greater(greater); }
-  if (less) { schema = schema.less(less); }
-  if (integer) { schema = schema.integer(); }
-  if (precision) { schema = schema.precision(precision); }
-
-  return schema.validate(value, { convert: false }, errorParser);
-});
-*/
 
 export default ({ construct }, value) =>
   doValidate(construct, value);

@@ -24,8 +24,8 @@
     "@babel/cli": "^7.4.4"
   },
   "scripts": {
-    "build": "babel src --out-dir _temp",
-    "postbuild": "rm -rf dist && mv _temp dist"
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel src --out-dir dist --root-mode upward"
   },
   "main": "dist/index.js"
 }

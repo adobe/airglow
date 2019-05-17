@@ -21,11 +21,15 @@ const makeState = value => ({
         required: true,
         fieldType: 'number',
         max: 100,
-        prevalidate: n => (n ? n * n : n),
-        validator: n => (n === 9 ? 'error.nines' : null)
+        prevalidate: (n, state) =>
+          (n ? state.formula(n) : n),
+        validator: (n, { times }) =>
+          (n === times ? 'error.nines' : null)
       }
     }
-  }
+  },
+  formula: a => a * a,
+  times: 9
 });
 
 describe('SelectInvalidValue', () => {

@@ -26,6 +26,18 @@ describe('FormPrefabIntegration', () => {
       )
     );
 
+    const fields = {
+      pizza: {
+        defaultValue: 'cheese',
+        validator: v => (v.indexOf('z') !== -1 ? 'error.z' : false)
+      },
+      size: {
+        fieldType: 'number',
+        defaultValue: 2,
+        max: 15
+      }
+    };
+
     prefabs = prefab({
       pizzaForm: {
         type: 'form',
@@ -33,17 +45,16 @@ describe('FormPrefabIntegration', () => {
         autocorrect: 'immediate',
         passive: true,
         sourceSelector: () => ({ size: 3 }),
-        fields: {
-          pizza: {
-            defaultValue: 'cheese',
-            validator: v => (v.indexOf('z') !== -1 ? 'error.z' : false)
-          },
-          size: {
-            fieldType: 'number',
-            defaultValue: 2,
-            max: 15
-          }
-        },
+        fields,
+        localKeys: ['size']
+      },
+      pizzaForm2: {
+        type: 'form',
+        whenToValidate: 'submit',
+        autocorrect: 'immediate',
+        passive: true,
+        sourceSelector: () => ({ size: 3 }),
+        fields,
         localKeys: ['size']
       }
     });
@@ -55,7 +66,9 @@ describe('FormPrefabIntegration', () => {
   });
 
   const getState = () => prefabs.pizzaForm.state(store.getState());
+  const getState2 = () => prefabs.pizzaForm2.state(store.getState());
   const getHandlers = () => prefabs.pizzaForm.handlers(store.dispatch);
+  const getHandlers2 = () => prefabs.pizzaForm2.handlers(store.dispatch);
 
   it('should correctly select the initial values', () => {
     expect(getState()).toMatchSnapshot();
@@ -74,7 +87,7 @@ describe('FormPrefabIntegration', () => {
     expect(prefabs.pizzaForm.isInvalid(store.getState())).toBe(false);
     getHandlers().pizzaField.onChange('meatz');
     getHandlers().pizzaField.onBlur();
-    expect(prefabs.pizzaForm.isInvalid(store.getState())).toBe('error.z');
+    expect(prefabs.pizzaForm.isInvalid(store.getState())).toMatchSnapshot();
   });
   it('can be dirty', () => {
     expect(prefabs.pizzaForm.isDirty(store.getState())).toBe(false);
@@ -86,5 +99,12 @@ describe('FormPrefabIntegration', () => {
     getHandlers().onReset();
     expect(getState().pizzaField.value).toBe('cheese');
     expect(prefabs.pizzaForm.isDirty(store.getState())).toBe(false);
+  });
+  it('does onSubmit validation', () => {
+    getHandlers2().pizzaField.onChange('meatz');
+    getHandlers2().pizzaField.onBlur();
+    expect(getState2().pizzaField.error).toBe(false);
+    getHandlers2().onSubmit();
+    expect(getState2().pizzaField.error).toBe('error.z');
   });
 });

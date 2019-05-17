@@ -57,6 +57,10 @@ describe('FormFieldSelectors', () => {
       handlers.onBlur();
       expect(dispatch.getCall(0).args).toMatchSnapshot();
     });
+    it('triggers a submit event', () => {
+      handlers.onSubmit();
+      expect(dispatch.getCall(0).args).toMatchSnapshot();
+    });
     it('triggers a reset event', () => {
       handlers.onReset();
       expect(dispatch.getCall(0).args).toMatchSnapshot();
@@ -64,6 +68,9 @@ describe('FormFieldSelectors', () => {
   });
   it('creates a change action', () => {
     expect(field.changeAction(78)).toMatchSnapshot();
+  });
+  it('creates a submit action', () => {
+    expect(field.submitAction()).toMatchSnapshot();
   });
   it('fetches the current value', () => {
     expect(field.value(state)).toBe(29);

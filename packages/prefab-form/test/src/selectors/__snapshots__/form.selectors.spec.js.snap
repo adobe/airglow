@@ -65,9 +65,34 @@ Array [
 
 exports[`FormSelectors uses submit actions 3`] = `Array []`;
 
+exports[`FormSelectors uses submit actions 4`] = `
+Array [
+  Object {
+    "construct": "moniesForm",
+    "type": "onSubmit",
+  },
+]
+`;
+
+exports[`FormSelectors uses submit actions 5`] = `
+Array [
+  Object {
+    "construct": "moniesForm",
+    "type": "onSubmit",
+  },
+]
+`;
+
 exports[`FormSelectors uses the fields handlers 1`] = `
 Array [
   "onChange",
   "newdata",
 ]
+`;
+
+exports[`FormSelectors uses the fields invalid state 1`] = `
+Object {
+  "error": "notvalid",
+  "field": "size",
+}
 `;

@@ -16,6 +16,7 @@ export const VALUE_CHANGE      = 'PREFAB_FORM_FIELD_VALUE';
 export const BLUR              = 'PREFAB_FORM_FIELD_BLUR';
 export const FOCUS             = 'PREFAB_FORM_FIELD_FOCUS';
 export const RESET             = 'PREFAB_FORM_FIELD_RESET';
+export const FIELD_SUBMIT      = 'PREFAB_FORM_FIELD_SUBMIT';
 export const SUBMIT            = 'PREFAB_FORM_SUBMIT';
 
 const mapConstruct = (construct, value) => ({ construct, value });
@@ -24,4 +25,5 @@ export const change = createAction(VALUE_CHANGE, mapConstruct);
 export const focus = createAction(FOCUS, mapConstruct);
 export const blur = createAction(BLUR, mapConstruct);
 export const reset = createAction(RESET, mapConstruct);
+export const submitField = createAction(FIELD_SUBMIT, mapConstruct);
 export const submit = createAction(SUBMIT, mapConstruct);

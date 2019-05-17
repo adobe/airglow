@@ -18,7 +18,7 @@ export default ({
   name,
   fieldName,
   externalName,
-  defaultValue = '',
+  defaultValue,
   fieldType = 'text',
   ...additional
 }) => {

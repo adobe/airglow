@@ -24,3 +24,10 @@ Object {
   },
 }
 `;
+
+exports[`FormPrefabIntegration validates 1`] = `
+Object {
+  "error": "error.z",
+  "field": "pizza",
+}
+`;

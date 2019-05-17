@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { change, blur, focus, reset } from '../actions';
+import { change, blur, focus, submitField, reset } from '../actions';
 import selectCurrentValue from './select.current.value';
 import selectInvalidValue from './select.invalid.value';
 import selectShouldValidate from './select.should.validate';
@@ -35,6 +35,7 @@ const makeHandlers = name => dispatch => ({
   onChange: v => dispatch(change(name, v)),
   onFocus: () => dispatch(focus(name)),
   onBlur: () => dispatch(blur(name)),
+  onSubmit: () => dispatch(submitField(name)),
   onReset: () => dispatch(reset(name))
 });
 
@@ -44,6 +45,7 @@ export default name => ({
   isInvalid: selectInvalidValue(name),
   isDirty: selectDirty(name),
   changeAction: v => change(name, v),
+  submitAction: () => submitField(name),
   resetAction: () => reset(name),
   state: makeState(name),
   handlers: makeHandlers(name)

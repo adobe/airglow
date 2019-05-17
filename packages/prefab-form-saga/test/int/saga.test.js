@@ -39,7 +39,7 @@ const mapHandlers = dispatch => ({
 const TestComponent = ({ colorField, onSubmit }) => (
   <form onSubmit={onSubmit}>
     <input
-      value={colorField.value}
+      value={colorField.value || ''}
       onChange={colorField.onChange}
     />
   </form>
@@ -92,8 +92,8 @@ describe('PrefabSagaIntegrationTest', () => {
     tree.find('form').prop('onSubmit')();
 
     const dispatches = dispatchList(tree.getState());
-    expect(dispatches[dispatches.length - 1]).toMatchSnapshot();
     expect(dispatches[dispatches.length - 2]).toMatchSnapshot();
+    expect(dispatches[dispatches.length - 3]).toMatchSnapshot();
   });
 
   it('submits if valid', () => {
@@ -101,8 +101,8 @@ describe('PrefabSagaIntegrationTest', () => {
     tree.find('form').prop('onSubmit')();
 
     const dispatches = dispatchList(tree.getState());
-    expect(dispatches[dispatches.length - 1]).toMatchSnapshot();
     expect(dispatches[dispatches.length - 2]).toMatchSnapshot();
+    expect(dispatches[dispatches.length - 3]).toMatchSnapshot();
   });
 
   it('calls a provided submit saga', () => {

@@ -70,7 +70,10 @@ const checkInvalid = fields => state =>
   R.find(
     R.identity,
     R.map(
-      field => field.isInvalid(state),
+      (field) => {
+        const invalid = field.isInvalid(state);
+        return invalid && { field: field.externalName, error: invalid };
+      },
       Object.values(fields)
     )
   ) || false;
@@ -90,5 +93,6 @@ export default ({
   handlers: makeHandlers(fields, config),
   isInvalid: checkInvalid(fields),
   isDirty: checkDirty(fields),
-  resetActions: getResetActions(fields, config)
+  resetActions: getResetActions(fields, config),
+  fields
 });

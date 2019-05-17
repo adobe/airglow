@@ -31,21 +31,25 @@ describe('CustomValidation', () => {
       const state = spawn({ min: 10 });
       expect(validator(state, 'abc')).toBe('error.string.min');
       expect(validator(state, 'abcdefghijklmnop')).toBe(false);
+      expect(validator(state, null)).toBe(false);
     });
     it('should validate max', function () {
       const state = spawn({ max: 10 });
       expect(validator(state, 'abcdefghijklmnop')).toBe('error.string.max');
       expect(validator(state, 'abc')).toBe(false);
+      expect(validator(state, null)).toBe(false);
     });
     it('should validate length', function () {
       const state = spawn({ length: 6 });
       expect(validator(state, 'abcdefghijklmnop')).toBe('error.string.length');
       expect(validator(state, 'abcdef')).toBe(false);
+      expect(validator(state, null)).toBe(false);
     });
     it('should validate regex', function () {
       const state = spawn({ regex: /abc.*/ });
       expect(validator(state, 'bcdef')).toBe('error.string.regex');
       expect(validator(state, 'abcdef')).toBe(false);
+      expect(validator(state, '')).toBe(false);
     });
     it('should validate alphaNum', function () {
       const state = spawn({ fieldType: 'alphanum' });
@@ -131,6 +135,14 @@ describe('CustomValidation', () => {
     it('should not accept strings', function () {
       const state = spawn({ });
       expect(validator(state, 'abc')).toBe('error.number.base');
+    });
+  });
+  describe('blob', () => {
+    it('should not validate', function () {
+      const state = { construct: { fieldType: 'blob' } };
+      expect(validator(state, 7)).toBe(false);
+      expect(validator(state, {})).toBe(false);
+      expect(validator(state, 'help')).toBe(false);
     });
   });
 });

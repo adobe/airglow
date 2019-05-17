@@ -74,7 +74,7 @@ describe('FormPrefabIntegration', () => {
     expect(prefabs.pizzaForm.isInvalid(store.getState())).toBe(false);
     getHandlers().pizzaField.onChange('meatz');
     getHandlers().pizzaField.onBlur();
-    expect(prefabs.pizzaForm.isInvalid(store.getState())).toBe('error.z');
+    expect(prefabs.pizzaForm.isInvalid(store.getState())).toMatchSnapshot();
   });
   it('can be dirty', () => {
     expect(prefabs.pizzaForm.isDirty(store.getState())).toBe(false);

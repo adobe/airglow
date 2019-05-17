@@ -52,6 +52,7 @@ The following lists the supported values for __fieldType__:
 | ---- |------------ | ------- |
 | text (default) | A text string | Hello World |
 | number | A number | 7.2 |
+| blob | Can be any type. Doesn't really have validation | { a: 'b' } |
 | email | An email address | abc@xyz.com |
 | alphanum | A combination of numbers and letters | ABC123 |
 | ip | A valid ip address | 21.34.106.99 |
@@ -176,6 +177,10 @@ export default prefab({
 });
 ```
 
+__localKeys__
+
+When preparing the data for the server, all fields will be included in the resulting object. You may use the _localKeys_ option to provide an array of fields to omit. For example: `localKeys: [id]`.
+
 ### Form Selectors
 The Form provides a few selectors that map all of the child selectors:
 
@@ -187,8 +192,6 @@ The Form provides a few selectors that map all of the child selectors:
 | isInvalid | state | is true if any field is invalid (reguardless of the __whenToValidate__ flag)
 | isDirty | state | is true if any field is dirty
 | resetActions | the full list of reset actions that should be triggered to reset the form
-
-One note on export: all field will be included in the resulting object. If some fields are only for the local view, you may use the `local: true`, configuration option on that Form Field and it will be omitted from exports.
 
 ### hasAnyDirty
 

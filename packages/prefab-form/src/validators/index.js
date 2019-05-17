@@ -25,10 +25,10 @@ const uriRegex = new RegExp('^(https?:\\/\\/)?' // protocol
   + '(\\?[;&a-z\\d%_.~+=-]*)?' // query string
   + '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
 
-const isLength = length => value => value && value.length === length;
-const isMaxLength = max => value => value && value.length <= max;
-const isMinLength = min => value => value && value.length >= min;
-const matches = regex => value => value && value.match && value.match(regex);
+const isLength = length => value => !value || value.length === length;
+const isMaxLength = max => value => !value || value.length <= max;
+const isMinLength = min => value => !value || value.length >= min;
+const matches = regex => value => !value || value.match && value.match(regex);
 const isAlphaNum = matches(/^[a-zA-Z0-9_]*$/);
 const isEmail = matches(emailRegex);
 const isIP = matches(ipRegex);
@@ -39,7 +39,7 @@ const isMaxValue = max => value => value <= max;
 const isGreater = min => value => value > min;
 const isLess = max => value => value < max;
 const isNumber = v => typeof v === 'number';
-const isString = v => typeof v === 'string';
+const isString = v => !v || typeof v === 'string';
 const hasPrecision = p => v => `${v}` === v.toFixed(p);
 
 export const json = makeValidator(isValidJson, 'error.string.json');

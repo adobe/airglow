@@ -71,3 +71,10 @@ Array [
   "newdata",
 ]
 `;
+
+exports[`FormSelectors uses the fields invalid state 1`] = `
+Object {
+  "error": "notvalid",
+  "field": "size",
+}
+`;

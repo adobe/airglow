@@ -65,7 +65,7 @@ describe('FormSelectors', () => {
   });
 
   it('uses the fields invalid state', () => {
-    expect(form.isInvalid({ invalid: 'notvalid' })).toBe('notvalid');
+    expect(form.isInvalid({ invalid: 'notvalid' })).toMatchSnapshot();
     expect(form.isInvalid({ })).toBe(false);
   });
 

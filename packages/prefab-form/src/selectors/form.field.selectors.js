@@ -10,6 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+import { createSelector } from 'reselect';
 import { change, blur, focus, submitField, reset } from '../actions';
 import selectCurrentValue from './select.current.value';
 import selectInvalidValue from './select.invalid.value';
@@ -22,22 +23,27 @@ const selectError = name => state => (
   selectShouldValidate(name, state) ? selectInvalidValue(name, state) : false
 );
 
-const makeState = name => state => ({
-  value: selectCurrentValue(name, state),
-  invalidMsg: selectInvalidValue(name, state),
-  error: selectError(name)(state),
-  required: getRequired(name)(state),
-  dirty: selectDirty(name, state),
-  ...customBundleItems(name, state)
-});
+const makeState = name => createSelector([
+  selectCurrentValue(name),
+  selectInvalidValue(name),
+  selectError(name),
+  getRequired(name),
+  selectDirty(name),
+  customBundleItems(name)
+], (value, invalidMsg, error, required, dirty, custom) => ({
+  value, invalidMsg, error, required, dirty, ...custom
+}));
 
-const makeHandlers = name => dispatch => ({
-  onChange: v => dispatch(change(name, v)),
-  onFocus: () => dispatch(focus(name)),
-  onBlur: () => dispatch(blur(name)),
-  onSubmit: () => dispatch(submitField(name)),
-  onReset: () => dispatch(reset(name))
-});
+const makeHandlers = name => createSelector(
+  [d => d],
+  dispatch => ({
+    onChange: v => dispatch(change(name, v)),
+    onFocus: () => dispatch(focus(name)),
+    onBlur: () => dispatch(blur(name)),
+    onSubmit: () => dispatch(submitField(name)),
+    onReset: () => dispatch(reset(name))
+  })
+);
 
 export default name => ({
   value: selectCurrentValue(name),

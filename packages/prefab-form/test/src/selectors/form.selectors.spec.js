@@ -10,6 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+import { createSelector } from 'reselect';
 import selector from '../../../src/selectors/form.selectors';
 
 describe('FormSelectors', () => {
@@ -28,7 +29,7 @@ describe('FormSelectors', () => {
           resetAction: construct => ({ construct, type: 'onReset' }),
           submitAction: construct => ({ construct, type: 'onSubmit' }),
           value: data => data.v,
-          state: data => ({ value: data.v }),
+          state: createSelector([data => data.v], value => ({ value })),
           isInvalid: data => data.invalid,
           isDirty: data => data.dirty
         },
@@ -41,7 +42,7 @@ describe('FormSelectors', () => {
           submitAction: construct => ({ construct, type: 'onSubmit' }),
           resetAction: construct => ({ construct, type: 'onReset' }),
           value: data => data.c,
-          state: data => ({ value: data.c }),
+          state: createSelector([data => data.c], value => ({ value })),
           isInvalid: () => false,
           isDirty: () => false
         }
@@ -61,9 +62,19 @@ describe('FormSelectors', () => {
     expect(dispatch.getCall(0).args).toMatchSnapshot();
   });
 
+  it('reselect the handlers', () => {
+    const handlers = form.handlers(dispatch);
+    expect(handlers).toBe(form.handlers(dispatch));
+  });
+
   it('uses the fields state', () => {
     const state = form.state({ v: 'test' });
     expect(state.size.value).toBe('test');
+  });
+
+  it('reselects state', () => {
+    const state = form.state({ v: 'test' });
+    expect(state).toBe(form.state({ v: 'test' }));
   });
 
   it('uses the fields invalid state', () => {

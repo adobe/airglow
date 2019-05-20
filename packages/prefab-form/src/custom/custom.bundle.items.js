@@ -11,12 +11,18 @@ governing permissions and limitations under the License.
 */
 
 import * as R from 'ramda';
+import { createSelector } from 'reselect';
 import selectCurrentValue from '../selectors/select.current.value';
 import { getConstruct } from '../selectors/select.store.paths';
 
-const checkbox = (name, state) => ({
-  checked: !!selectCurrentValue(name, state)
-});
+const noResult = {};
+
+const checkbox = name => createSelector(
+  [selectCurrentValue(name)],
+  value => ({
+    checked: !!value
+  })
+);
 
 const map = { checkbox };
 
@@ -24,5 +30,5 @@ const getType = (name, state) => getConstruct(name)(state).fieldType;
 
 export default R.curry((name, state) => {
   const type = getType(name, state);
-  return (map[type] ? map[type](name, state) : {});
+  return (map[type] ? map[type](name)(state) : noResult);
 });

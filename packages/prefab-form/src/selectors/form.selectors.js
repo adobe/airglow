@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 
 import * as R from 'ramda';
+import { createSelector } from 'reselect';
 import { submit } from '../actions';
 
 const getResetActions = (fields, { name, resetAction, resetActions = [] }) => {
@@ -63,14 +64,25 @@ const makeExport = (fields, { localKeys = [] }) => (state) => {
   return reduced;
 };
 
-const makeState = fields => state =>
-  R.mapObjIndexed(field => field.state(state), fields);
+const makeState = fields => createSelector(
+  R.map(field => field.state, Object.values(fields)),
+  (...args) => {
+    const results = {};
+    for (let i = 0; i < args.length; ++i) {
+      results[Object.keys(fields)[i]] = args[i];
+    }
+    return results;
+  }
+);
 
-const makeHandlers = (fields, config) => dispatch => ({
-  onReset: onResetHandler(fields, config)(dispatch),
-  onSubmit: onSubmitHandler(fields, config)(dispatch),
-  ...R.mapObjIndexed(field => field.handlers(dispatch), fields)
-});
+const makeHandlers = (fields, config) => createSelector(
+  [d => d],
+  dispatch => ({
+    onReset: onResetHandler(fields, config)(dispatch),
+    onSubmit: onSubmitHandler(fields, config)(dispatch),
+    ...R.mapObjIndexed(field => field.handlers(dispatch), fields)
+  })
+);
 
 const checkInvalid = fields => state =>
   R.find(

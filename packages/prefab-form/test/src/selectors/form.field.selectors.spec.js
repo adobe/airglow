@@ -65,6 +65,9 @@ describe('FormFieldSelectors', () => {
       handlers.onReset();
       expect(dispatch.getCall(0).args).toMatchSnapshot();
     });
+    it('reselects the handlers', () => {
+      expect(field.handlers(dispatch)).toBe(handlers);
+    });
   });
   it('creates a change action', () => {
     expect(field.changeAction(78)).toMatchSnapshot();
@@ -77,5 +80,11 @@ describe('FormFieldSelectors', () => {
   });
   it('fetches the current error', () => {
     expect(field.error(state)).toBe('error.number.max');
+  });
+  it('fetches the current state', () => {
+    expect(field.state(state)).toMatchSnapshot();
+  });
+  it('reselects the state', () => {
+    expect(field.state(state)).toBe(field.state(state));
   });
 });

@@ -16,8 +16,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@airglow/reducers": "^0.3.0",
-    "reselect": "^4.0.0"
+    "@airglow/reducers": "^0.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4"

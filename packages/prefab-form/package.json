@@ -20,7 +20,8 @@
     "@airglow/reducers": "^0.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4"
+    "@babel/cli": "^7.4.4",
+    "reselect": "^4.0.0"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",

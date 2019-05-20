@@ -20,6 +20,16 @@ Object {
 }
 `;
 
+exports[`FormFieldSelectors fetches the current state 1`] = `
+Object {
+  "dirty": true,
+  "error": "error.number.max",
+  "invalidMsg": "error.number.max",
+  "required": true,
+  "value": 29,
+}
+`;
+
 exports[`FormFieldSelectors handlers fills out the bundle 1`] = `
 Object {
   "dirty": true,

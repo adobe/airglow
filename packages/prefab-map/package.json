@@ -17,8 +17,7 @@
   ],
   "dependencies": {
     "@airglow/prefab": "^0.3.0",
-    "@airglow/reducers": "^0.3.0",
-    "reselect": "^3.0.0"
+    "@airglow/reducers": "^0.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4"

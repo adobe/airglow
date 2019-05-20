@@ -1,6 +1,6 @@
 {
   "name": "@airglow/plugin-test",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -17,11 +17,11 @@
   ],
   "main": "dist/index.js",
   "dependencies": {
-    "@airglow/reducers": "^0.3.0",
-    "airglow": "^0.3.0"
+    "@airglow/reducers": "^0.3.1",
+    "airglow": "^0.3.1"
   },
   "devDependencies": {
-    "@airglow/store-react": "^0.3.0",
+    "@airglow/store-react": "^0.3.1",
     "@babel/cli": "^7.4.4"
   },
   "scripts": {

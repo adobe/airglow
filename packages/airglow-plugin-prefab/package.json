@@ -1,7 +1,7 @@
 {
   "name": "@airglow/plugin-prefab",
   "description": "An prefab plugin for Airglow.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -16,12 +16,12 @@
     "dist/"
   ],
   "dependencies": {
-    "@airglow/prefab": "^0.3.1",
-    "@airglow/reducers": "^0.3.1",
-    "airglow": "^0.3.1"
+    "@airglow/prefab": "^0.3.2",
+    "@airglow/reducers": "^0.3.2",
+    "airglow": "^0.3.2"
   },
   "devDependencies": {
-    "@airglow/store-react": "^0.3.1",
+    "@airglow/store-react": "^0.3.2",
     "@babel/cli": "^7.4.4"
   },
   "scripts": {

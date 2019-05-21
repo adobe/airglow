@@ -1,6 +1,6 @@
 {
   "name": "@airglow/store-react",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -17,8 +17,8 @@
   ],
   "main": "dist/index.js",
   "dependencies": {
-    "@airglow/reducers": "^0.3.2",
-    "airglow": "^0.3.2"
+    "@airglow/reducers": "^0.3.3",
+    "airglow": "^0.3.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4"

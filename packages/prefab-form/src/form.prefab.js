@@ -37,7 +37,10 @@ export default ({
   selectorInternal.formName = name;
   selectorInternal.type = 'form';
 
-  R.forEachObjIndexed((v, k) => { selectorInternal[k] = v; }, additional);
+  R.forEachObjIndexed(
+    (v, k) => { selectorInternal[k] = selectorInternal[k] || v; },
+    additional
+  );
 
   return { [name]: selectorInternal, ...prefabs };
 };

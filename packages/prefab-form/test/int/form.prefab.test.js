@@ -46,7 +46,8 @@ describe('FormPrefabIntegration', () => {
         passive: true,
         sourceSelector: () => ({ size: 3 }),
         fields,
-        localKeys: ['size']
+        localKeys: ['size'],
+        resetAction: name => ({ type: `${name}-Fake` })
       },
       pizzaForm2: {
         type: 'form',
@@ -106,5 +107,8 @@ describe('FormPrefabIntegration', () => {
     expect(getState2().pizzaField.error).toBe(false);
     getHandlers2().onSubmit();
     expect(getState2().pizzaField.error).toBe('error.z');
+  });
+  it('has the correct resetActions', () => {
+    expect(prefabs.pizzaForm.resetActions).toMatchSnapshot();
   });
 });

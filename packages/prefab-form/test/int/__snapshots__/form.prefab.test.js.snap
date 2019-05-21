@@ -6,6 +6,28 @@ Object {
 }
 `;
 
+exports[`FormPrefabIntegration has the correct resetActions 1`] = `
+Array [
+  Object {
+    "type": "pizzaForm-Fake",
+  },
+  Object {
+    "payload": Object {
+      "construct": "pizzaForm#pizza",
+      "value": undefined,
+    },
+    "type": "PREFAB_FORM_FIELD_RESET",
+  },
+  Object {
+    "payload": Object {
+      "construct": "pizzaForm#size",
+      "value": undefined,
+    },
+    "type": "PREFAB_FORM_FIELD_RESET",
+  },
+]
+`;
+
 exports[`FormPrefabIntegration should correctly select the initial values 1`] = `
 Object {
   "pizzaField": Object {

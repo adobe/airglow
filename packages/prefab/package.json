@@ -1,6 +1,6 @@
 {
   "name": "@airglow/prefab",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -16,7 +16,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@airglow/reducers": "^0.3.3"
+    "@airglow/reducers": "^0.4.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4"

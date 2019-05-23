@@ -23,7 +23,9 @@ export const getCleanValue = (name, state) => {
 
 // returns the current value in the state. If value is not set
 // it will check for a default value in the construct
-export default R.curry((name, state) => R.defaultTo(
-  getCleanValue(name, state),
-  getStore(name)(state).value
-));
+export default R.curry((name, state) => {
+  const { value } = getStore(name)(state);
+  return value === undefined
+    ? getCleanValue(name, state)
+    : value;
+});

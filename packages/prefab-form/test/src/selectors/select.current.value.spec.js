@@ -33,6 +33,18 @@ describe('SelectCurrentValue', () => {
     const state = { prefab: { pizza: {
       construct: defaultConstruct
     } } };
+    const state2 = { prefab: { pizza: {
+      construct: fullConstruct,
+      store: { value: undefined }
+    } } };
     expect(selector('pizza', state)).toBe('cheese');
+    expect(selector('pizza', state2)).toBe('hawaiian');
+  });
+  it('should return the value if null', () => {
+    const state = { prefab: { pizza: {
+      construct: fullConstruct,
+      store: { value: null }
+    } } };
+    expect(selector('pizza', state)).toBe(null);
   });
 });

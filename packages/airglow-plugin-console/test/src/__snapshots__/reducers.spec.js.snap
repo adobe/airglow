@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bootstrap.Reducer should add the specified data to the prefab store 1`] = `
+Object {
+  "pizza": Object {
+    "description": "ABC",
+  },
+  "toppings": Object {
+    "description": "EFG",
+  },
+}
+`;
+
+exports[`Bootstrap.Reducer should merge with existing data 1`] = `
+Object {
+  "pizza": Object {
+    "description": "ABC",
+  },
+  "size": Object {
+    "description": "LMN",
+  },
+  "toppings": Object {
+    "description": "EFG",
+  },
+}
+`;

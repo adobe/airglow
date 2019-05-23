@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AirglowConsolePluginIntTest should build out the help 1`] = `
+Array [
+  "orderPizza(): increases the number of pizzas",
+]
+`;
+
+exports[`AirglowConsolePluginIntTest should build out the help 2`] = `
+Array [
+  "helpMe(): Display this help menu",
+]
+`;
+
+exports[`AirglowConsolePluginIntTest should build out the help 3`] = `
+Array [
+  "pizzas(): prints out the number of pizzas",
+]
+`;

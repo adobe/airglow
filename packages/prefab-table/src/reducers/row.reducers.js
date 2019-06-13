@@ -22,10 +22,12 @@ const selectedRowsLens = R.lensPath(selectedRowsPath);
 
 export const deselectRowsReducer = (state, { payload }) => {
   const { rows } = payload;
-  const normalized = !rows
-    ? R.view(selectedRowsLens, state)
-    : Array.isArray(rows) ? rows : [rows];
 
+  if (!rows) {
+    return R.set(selectedRowsLens, [], state);
+  }
+
+  const normalized = Array.isArray(rows) ? rows : [rows];
   return R.over(selectedRowsLens, R.without(normalized), state);
 };
 

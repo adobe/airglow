@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sortReducer should ignore 1`] = `
+Object {
+  "construct": Object {
+    "columns": Object {
+      "color": Object {},
+      "name": Object {},
+    },
+  },
+  "store": Object {
+    "sort": Object {},
+  },
+}
+`;
+
+exports[`sortReducer should set column and order to 1 from empty state 1`] = `
+Object {
+  "construct": Object {
+    "columns": Object {
+      "color": Object {},
+      "name": Object {},
+    },
+  },
+  "store": Object {
+    "sort": Object {
+      "column": "name",
+      "order": 1,
+    },
+  },
+}
+`;
+
+exports[`sortReducer should sort new column 1`] = `
+Object {
+  "construct": Object {
+    "columns": Object {
+      "color": Object {},
+      "name": Object {},
+    },
+  },
+  "store": Object {
+    "sort": Object {
+      "column": "color",
+      "order": 1,
+    },
+  },
+}
+`;
+
+exports[`sortReducer should toggle sort order for same column 1`] = `
+Object {
+  "construct": Object {
+    "columns": Object {
+      "color": Object {},
+      "name": Object {},
+    },
+  },
+  "store": Object {
+    "sort": Object {
+      "column": "name",
+      "order": -1,
+    },
+  },
+}
+`;

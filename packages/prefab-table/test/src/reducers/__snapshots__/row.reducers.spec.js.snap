@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`deselectRowsReducer should deselect rows from the selectedRows state 1`] = `
+Object {
+  "construct": Object {
+    "allowsMultipleSelection": true,
+    "allowsSelection": true,
+  },
+  "store": Object {
+    "selectedRows": Array [],
+  },
+}
+`;
+
+exports[`deselectRowsReducer should remove specific rows from the selectedRows state 1`] = `
+Object {
+  "construct": Object {
+    "allowsMultipleSelection": true,
+    "allowsSelection": true,
+  },
+  "store": Object {
+    "selectedRows": Array [
+      "kayak",
+    ],
+  },
+}
+`;
+
+exports[`deselectRowsReducer should remove specific rows from the selectedRows state 2`] = `
+Object {
+  "construct": Object {
+    "allowsMultipleSelection": true,
+    "allowsSelection": true,
+  },
+  "store": Object {
+    "selectedRows": Array [
+      "kayak",
+    ],
+  },
+}
+`;
+
+exports[`toggleRowReducer should add a new row and remove the previous if allowsMultipleSelection is disabled 1`] = `
+Object {
+  "construct": Object {
+    "allowsMultipleSelection": false,
+    "allowsSelection": true,
+  },
+  "store": Object {
+    "selectedRows": Array [
+      "kayak",
+    ],
+  },
+}
+`;
+
+exports[`toggleRowReducer should add a row if selected 1`] = `
+Object {
+  "construct": Object {
+    "allowsMultipleSelection": true,
+    "allowsSelection": true,
+  },
+  "store": Object {
+    "selectedRows": Array [
+      "raft",
+      "canoe",
+    ],
+  },
+}
+`;
+
+exports[`toggleRowReducer should not do anything if allowsSelection is disabled 1`] = `
+Object {
+  "construct": Object {
+    "allowsMultipleSelection": true,
+    "allowsSelection": false,
+  },
+  "store": Object {
+    "selectedRows": Array [],
+  },
+}
+`;
+
+exports[`toggleRowReducer should remove a row if already selected 1`] = `
+Object {
+  "construct": Object {
+    "allowsMultipleSelection": true,
+    "allowsSelection": true,
+  },
+  "store": Object {
+    "selectedRows": Array [],
+  },
+}
+`;

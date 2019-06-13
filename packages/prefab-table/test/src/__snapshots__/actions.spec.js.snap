@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create a deselectRows action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "boats",
+    "rows": "oars",
+  },
+  "type": "TABLE_DESELECT_ROWS",
+}
+`;
+
+exports[`should create a doSort action 1`] = `
+Object {
+  "payload": Object {
+    "column": "color",
+    "construct": "fruits",
+  },
+  "type": "TABLE_SORT",
+}
+`;
+
+exports[`should create a toggleRow action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "table",
+    "row": "row",
+  },
+  "type": "TABLE_TOGGLE_ROW",
+}
+`;

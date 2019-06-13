@@ -1,0 +1,31 @@
+{
+  "name": "@airglow/prefab-table",
+  "description": "Prefab for Table Implementations",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/airglow.git",
+    "directory": "packages/prefab-table"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Adobe Systems",
+  "license": "Apache-2.0",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "@airglow/prefab": "^0.4.0",
+    "@airglow/reducers": "^0.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "reselect": "^4.0.0"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel src --out-dir dist"
+  },
+  "main": "dist/index.js"
+}

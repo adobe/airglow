@@ -25,7 +25,7 @@
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
-    "build": "babel src --out-dir dist"
+    "build": "babel src --out-dir dist --root-mode upward"
   },
   "main": "dist/index.js"
 }

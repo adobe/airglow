@@ -47,6 +47,7 @@ The basic [Prefab Form](../packages/prefab-form) allows for custom configuration
 | errorActions | An action to dispatch if a save operation failes. |
 | errorActions | An array of actions to dispatch if a save operation fails. |
 | submitSaga | A custom redux saga to trigger if the form is valid |
+| resetOnSuccess | A boolean to determine if the form resetActions should trigger after success. Default is true |
 
 Please note, this saga doesn't actually run any save operations. It simply validates and calls the invalid or valid actions accordingly. It is up to you to respond to the `validAction(s)` or provide a `submitSaga`. From there, you must perform the save and trigger the `successActions` and `errorActions` accordingly.
 

@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`table.selector bundle should get selected row data from state 1`] = `
+Array [
+  Object {
+    "color": "orange",
+    "name": "orange",
+  },
+]
+`;
+
+exports[`table.selector bundle should handle a dataSelector that returns undefined 1`] = `Array []`;
+
+exports[`table.selector bundle should trigger an onHeaderClick action 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "column": "color",
+      "construct": "fruits",
+    },
+    "type": "TABLE_SORT",
+  },
+]
+`;
+
+exports[`table.selector bundle should trigger an onRowClick action 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "construct": "fruits",
+      "row": Object {
+        "color": "orange",
+        "name": "orange",
+      },
+    },
+    "type": "TABLE_TOGGLE_ROW",
+  },
+]
+`;
+
+exports[`table.selector creates a deselect rows action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "fruits",
+    "rows": undefined,
+  },
+  "type": "TABLE_DESELECT_ROWS",
+}
+`;
+
+exports[`table.selector creates a toggle row action 1`] = `
+Object {
+  "payload": Object {
+    "construct": "fruits",
+    "row": undefined,
+  },
+  "type": "TABLE_TOGGLE_ROW",
+}
+`;
+
+exports[`table.selector gets the selected rows 1`] = `
+Array [
+  Object {
+    "color": "orange",
+    "name": "orange",
+  },
+]
+`;

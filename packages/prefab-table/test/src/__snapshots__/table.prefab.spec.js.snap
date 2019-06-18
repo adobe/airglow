@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tablePrefab should return the table 1`] = `
+Object {
+  "fruits": Object {
+    "allowsMultipleSelection": true,
+    "allowsSelection": true,
+    "columns": Object {
+      "color": Object {
+        "sorter": [Function],
+      },
+      "name": Object {
+        "sorter": [Function],
+      },
+    },
+    "dataSelector": [Function],
+    "defaultSort": undefined,
+    "deselectRowsAction": [Function],
+    "handlers": [Function],
+    "reduce": [Function],
+    "selectedData": [Function],
+    "state": [Function],
+    "tableName": "fruits",
+    "toggleRowAction": [Function],
+  },
+}
+`;

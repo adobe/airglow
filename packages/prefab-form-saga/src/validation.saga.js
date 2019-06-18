@@ -26,10 +26,11 @@ export function* runValidations({ payload }) {
     return;
   }
 
-  const successActions = [
-    ...form.resetActions,
+  const extractedSuccessActions = [
     ...extractActions('successAction', form)
   ];
+  const successActions = form.resetOnSuccess !== false
+    ? [...form.resetActions, ...extractedSuccessActions] : extractedSuccessActions;
   const errorActions = extractActions('errorAction', form);
   const formData = { formName: construct, successActions, errorActions };
   const values = form.export(state);

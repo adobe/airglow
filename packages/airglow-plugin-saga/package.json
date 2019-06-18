@@ -1,7 +1,7 @@
 {
   "name": "@airglow/plugin-saga",
   "description": "A redux-saga plugin for airglow.",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -16,11 +16,11 @@
     "dist/"
   ],
   "dependencies": {
-    "airglow": "^0.4.0",
+    "airglow": "^0.5.0",
     "redux-saga": "^1.0.2"
   },
   "devDependencies": {
-    "@airglow/store-redux": "^0.4.0",
+    "@airglow/store-redux": "^0.5.0",
     "@babel/cli": "^7.4.4"
   },
   "scripts": {

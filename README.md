@@ -53,7 +53,7 @@ npm install --save @airglow/store-react
 
 ### Which store is right for me?
 
-That depends. If you are looking to leverage Airglow for all it has to offer, you'll want the Redux Store. If you just need to store some data and maybe do some higherorder components, then the React Store will suffice.
+That depends. If you are looking to leverage Airglow for all it has to offer, you'll want the [Redux Store](./packages/airglow-store-redux). If you just need to store some data and maybe do some higherorder components, then the [React Store](./packages/airglow-store-react) will suffice.
 
 ## Plugins
 

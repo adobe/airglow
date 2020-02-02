@@ -20,7 +20,7 @@
     "react": "^16.8.6"
   },
   "dependencies": {
-    "ramda": "^0.26.1"
+    "ramda": "^0.27.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4"

@@ -1,7 +1,7 @@
 {
   "name": "@airglow/prefab-form-saga",
   "description": "A saga to hook up prefab-forms to redux for saving",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -16,16 +16,16 @@
     "dist/"
   ],
   "dependencies": {
-    "@airglow/prefab-form": "^0.5.0"
+    "@airglow/prefab-form": "^0.5.1"
   },
   "devDependencies": {
-    "@airglow/plugin-prefab": "^0.5.0",
-    "@airglow/plugin-saga": "^0.5.0",
-    "@airglow/plugin-test": "^0.5.0",
-    "@airglow/prefab": "^0.5.0",
-    "@airglow/store-redux": "^0.5.0",
+    "@airglow/plugin-prefab": "^0.5.1",
+    "@airglow/plugin-saga": "^0.5.1",
+    "@airglow/plugin-test": "^0.5.1",
+    "@airglow/prefab": "^0.5.1",
+    "@airglow/store-redux": "^0.5.1",
     "@babel/cli": "^7.4.4",
-    "airglow": "^0.5.0"
+    "airglow": "^0.5.1"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",

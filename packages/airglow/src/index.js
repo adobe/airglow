@@ -18,4 +18,4 @@ export * from './types';
 
 export { AirglowProvider, AirglowWrapper };
 
-export * from './util/test.util';
+export { fakeStore, renderAirglow } from './util/test.util';

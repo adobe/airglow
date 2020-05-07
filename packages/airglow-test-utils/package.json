@@ -1,7 +1,7 @@
 {
   "name": "@airglow/test-utils",
   "description": "Test utils for Airglow",
-  "version": "0.0.1",
+  "version": "0.6.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -20,8 +20,8 @@
     "react": "^16.8.6"
   },
   "devDependencies": {
-    "airglow": "^0.5.2",
-    "@babel/cli": "^7.4.4"
+    "@babel/cli": "^7.4.4",
+    "airglow": "^0.6.0"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",

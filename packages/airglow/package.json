@@ -1,6 +1,6 @@
 {
   "name": "airglow",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -23,7 +23,7 @@
     "ramda": "^0.26.1"
   },
   "devDependencies": {
-    "@airglow/test-utils": "^0.0.1",
+    "@airglow/test-utils": "^0.6.0",
     "@babel/cli": "^7.4.4"
   },
   "scripts": {

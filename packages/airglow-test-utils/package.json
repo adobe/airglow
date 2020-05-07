@@ -17,10 +17,10 @@
   ],
   "main": "dist/index.js",
   "peerDependencies": {
-    "airglow": "^0.5.2",
     "react": "^16.8.6"
   },
   "devDependencies": {
+    "airglow": "^0.5.2",
     "@babel/cli": "^7.4.4"
   },
   "scripts": {

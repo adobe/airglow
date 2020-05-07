@@ -18,6 +18,7 @@
   "main": "dist/index.js",
   "dependencies": {
     "@airglow/reducers": "^0.5.2",
+    "@airglow/test-utils": "^0.0.1",
     "airglow": "^0.5.2"
   },
   "devDependencies": {

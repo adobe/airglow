@@ -10,11 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+import { REDUCER } from 'airglow';
 import React from 'react';
 import { assoc } from 'ramda';
 
-import { REDUCER } from '../../../src/types';
-import { renderAirglow, fakeStore } from '../../../src/util/test.util';
+import { renderAirglow, fakeStore } from '../src/index';
 
 const slimePlugin = (engine) => {
   engine.plugin(REDUCER, (state, action) =>
@@ -28,10 +28,10 @@ describe('AirglowTestUtil', () => {
   beforeEach(() => {
     tree = renderAirglow(<div>Hello</div>, { store: fakeStore, plugins: [slimePlugin] });
   });
-  it('should render the desired children', function () {
+  it('should render the desired children', () => {
     expect(tree.debug()).toMatchSnapshot();
   });
-  it('should map the dispatch function', function () {
+  it('should map the dispatch function', () => {
     expect(tree.dispatch).toBeTruthy();
   });
 });

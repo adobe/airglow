@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@airglow/store-react": "^0.5.2",
+    "@airglow/test-utils": "^0.0.1",
     "@babel/cli": "^7.4.4"
   },
   "scripts": {

@@ -24,6 +24,7 @@
     "@airglow/plugin-test": "^0.5.2",
     "@airglow/prefab": "^0.5.2",
     "@airglow/store-redux": "^0.5.2",
+    "@airglow/test-utils": "^0.0.1",
     "@babel/cli": "^7.4.4",
     "airglow": "^0.5.2"
   },

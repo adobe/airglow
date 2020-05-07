@@ -11,9 +11,11 @@ governing permissions and limitations under the License.
 */
 
 import sinon from 'sinon';
+
+import { fakeStore } from '@airglow/test-utils';
+
 import Engine from '../../src/engine';
 import { FEATURE, BOOTSTRAP_MODULE, BOOTSTRAP_PLUGIN } from '../../src/types';
-import { fakeStore } from '../../src/util/test.util';
 
 let ranFeature;
 const reducerPlugin1 = (engine) => {

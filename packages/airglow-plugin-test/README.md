@@ -22,7 +22,7 @@ You can access data using `lastDispatch` and `dispatchList`:
 
 ```js
 import React from 'react';
-import { renderAirglow } from 'airglow';
+import { renderAirglow } from '@airglow/test-utils';
 import ReactStore from '@airglow/store-react';
 import plugin, { lastDispatch, dispatchList } from '@airglow/plugin-test';
 

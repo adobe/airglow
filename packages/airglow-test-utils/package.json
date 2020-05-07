@@ -1,11 +1,11 @@
 {
-  "name": "@airglow/plugin-saga",
-  "description": "A redux-saga plugin for airglow.",
-  "version": "0.5.2",
+  "name": "@airglow/test-utils",
+  "description": "Test utils for Airglow",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
-    "directory": "packages/airglow-plugin-saga"
+    "directory": "packages/airglow-test-utils"
   },
   "publishConfig": {
     "access": "public"
@@ -15,18 +15,17 @@
   "files": [
     "dist/"
   ],
-  "dependencies": {
+  "main": "dist/index.js",
+  "peerDependencies": {
     "airglow": "^0.5.2",
-    "redux-saga": "^1.0.2"
+    "react": "^16.8.6"
   },
   "devDependencies": {
-    "@airglow/store-redux": "^0.5.2",
-    "@airglow/test-utils": "^0.0.1",
     "@babel/cli": "^7.4.4"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
-    "build": "babel src --out-dir dist --root-mode upward"
-  },
-  "main": "dist/index.js"
+    "build": "babel src --out-dir dist --root-mode upward",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

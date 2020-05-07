@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 import React from 'react';
-import { renderAirglow } from 'airglow';
+import { renderAirglow } from '@airglow/test-utils';
 import ReduxStore, { connect } from '@airglow/store-redux';
 import prefabPlugin from '@airglow/plugin-prefab';
 import sagaPlugin from '@airglow/plugin-saga';

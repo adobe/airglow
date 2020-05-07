@@ -12,10 +12,12 @@ governing permissions and limitations under the License.
 
 import React from 'react';
 import { mount } from 'enzyme';
+
+import { fakeStore } from '@airglow/test-utils';
+
 import Airglow, {
   BOOTSTRAP_MODULE, BOOTSTRAP_PLUGIN, AirglowWrapper
 } from '../../src';
-import { fakeStore } from '../../src/util/test.util';
 
 let diamonds;
 let tree;

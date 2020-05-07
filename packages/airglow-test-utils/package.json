@@ -1,15 +1,15 @@
 {
-  "name": "airglow",
-  "version": "0.5.2",
+  "name": "@airglow/test-utils",
+  "description": "Test utils for Airglow",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
-    "directory": "packages/airglow"
+    "directory": "packages/airglow-test-utils"
   },
   "publishConfig": {
     "access": "public"
   },
-  "description": "Simple Clean React Framework",
   "author": "Adobe Systems",
   "license": "Apache-2.0",
   "files": [
@@ -19,11 +19,8 @@
   "peerDependencies": {
     "react": "^16.8.6"
   },
-  "dependencies": {
-    "ramda": "^0.26.1"
-  },
   "devDependencies": {
-    "@airglow/test-utils": "^0.0.1",
+    "airglow": "^0.5.2",
     "@babel/cli": "^7.4.4"
   },
   "scripts": {

@@ -17,11 +17,11 @@
   ],
   "main": "dist/index.js",
   "peerDependencies": {
+    "airglow": "^0.6.1",
     "react": "^16.8.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "airglow": "^0.6.1"
+    "@babel/cli": "^7.4.4"
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",

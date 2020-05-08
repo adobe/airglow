@@ -10,9 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import Airglow from 'airglow';
 import React from 'react';
 import { mount } from 'enzyme';
+import Airglow from '../../packages/airglow/src';
 
 export const renderAirglow = (children, props) => {
   let airglow;

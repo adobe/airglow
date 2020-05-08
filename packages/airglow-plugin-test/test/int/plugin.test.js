@@ -11,9 +11,9 @@ governing permissions and limitations under the License.
 */
 
 import React from 'react';
-import { renderAirglow } from '@airglow/test-utils';
 import ReactStore from '@airglow/store-react';
 import plugin, { lastDispatch, dispatchList } from '../../src/index';
+import { renderAirglow } from '../../../../test/util/test.utils';
 
 let tree;
 

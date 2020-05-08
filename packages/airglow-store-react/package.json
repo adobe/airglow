@@ -21,7 +21,6 @@
     "airglow": "^0.6.1"
   },
   "devDependencies": {
-    "@airglow/test-utils": "^0.6.1",
     "@babel/cli": "^7.4.4"
   },
   "scripts": {

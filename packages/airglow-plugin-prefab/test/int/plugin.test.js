@@ -11,11 +11,11 @@ governing permissions and limitations under the License.
 */
 
 import React from 'react';
-import { renderAirglow } from '@airglow/test-utils';
 import ReactStore, { connect } from '@airglow/store-react';
 import prefab from '@airglow/prefab';
 
 import plugin from '../../src/index';
+import { renderAirglow } from '../../../../test/util/test.utils';
 
 let tree;
 

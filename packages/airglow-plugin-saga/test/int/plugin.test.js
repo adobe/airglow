@@ -12,9 +12,9 @@ governing permissions and limitations under the License.
 
 import React from 'react';
 import ReduxStore, { connect } from '@airglow/store-redux';
-import { renderAirglow } from '@airglow/test-utils';
 import { takeEvery } from 'redux-saga/effects';
 import plugin, { SAGA } from '../../src/index';
+import { renderAirglow } from '../../../../test/util/test.utils';
 
 const FETCH = 'FETCH_REQUEST';
 const ac = () => ({ type: FETCH });

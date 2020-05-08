@@ -14,11 +14,10 @@ import React from 'react';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
-import { fakeStore } from '@airglow/test-utils';
-
 import Airglow from '../../src/airglow';
 import * as engine from '../../src/engine';
 import { COMPONENT, HOC } from '../../src/types';
+import { fakeStore } from '../../../../test/util/test.utils';
 
 let bootstrapSpy;
 let pluginSpy;

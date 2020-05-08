@@ -1,6 +1,6 @@
 {
   "name": "@airglow/eslint-config-airglow",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -19,5 +19,6 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.0.3"
-  }
+  },
+  "gitHead": "737aea9026515c26fea95d0d3f7c3ffff4417211"
 }

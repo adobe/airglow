@@ -1,7 +1,7 @@
 {
   "name": "@airglow/plugin-devtools",
   "description": "Load React and Redux Devtools in Airglow.",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -16,14 +16,14 @@
     "dist/"
   ],
   "dependencies": {
-    "airglow": "^0.6.0",
+    "airglow": "^0.6.1",
     "redux-devtools": "^3.4.0",
     "redux-devtools-dock-monitor": "^1.1.2",
     "redux-devtools-log-monitor": "^1.3.0"
   },
   "devDependencies": {
-    "@airglow/store-redux": "^0.6.0",
-    "@airglow/test-utils": "^0.6.0",
+    "@airglow/store-redux": "^0.6.1",
+    "@airglow/test-utils": "^0.6.1",
     "@babel/cli": "^7.4.4"
   },
   "resolutions": {
@@ -34,5 +34,5 @@
     "build": "babel src --out-dir dist --root-mode upward"
   },
   "main": "dist/index.js",
-  "gitHead": "40d79588437fc54778f38d351f9a219f31b30e7f"
+  "gitHead": "737aea9026515c26fea95d0d3f7c3ffff4417211"
 }

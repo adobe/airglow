@@ -1,6 +1,6 @@
 {
   "name": "@airglow/store-redux",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -21,9 +21,9 @@
     "redux": "^4.0.1"
   },
   "dependencies": {
-    "@airglow/reducers": "^0.6.0",
-    "@airglow/test-utils": "^0.6.0",
-    "airglow": "^0.6.0"
+    "@airglow/reducers": "^0.6.1",
+    "@airglow/test-utils": "^0.6.1",
+    "airglow": "^0.6.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4"
@@ -33,5 +33,5 @@
     "build": "babel src --out-dir dist --root-mode upward",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "gitHead": "40d79588437fc54778f38d351f9a219f31b30e7f"
+  "gitHead": "737aea9026515c26fea95d0d3f7c3ffff4417211"
 }

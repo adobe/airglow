@@ -1,7 +1,7 @@
 {
   "name": "@airglow/plugin-console",
   "description": "A plugin for providing console commands to Airglow users.",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -16,11 +16,11 @@
     "dist/"
   ],
   "dependencies": {
-    "@airglow/reducers": "^0.6.1",
-    "airglow": "^0.6.1"
+    "@airglow/reducers": "^0.7.0",
+    "airglow": "^0.7.0"
   },
   "devDependencies": {
-    "@airglow/store-react": "^0.6.2",
+    "@airglow/store-react": "^0.7.0",
     "@babel/cli": "^7.4.4"
   },
   "scripts": {

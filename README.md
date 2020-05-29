@@ -1,7 +1,7 @@
 # Airglow
 
 [![CircleCI](https://img.shields.io/circleci/project/github/adobe/airglow/master.svg?logo=circleci)](https://circleci.com/gh/adobe/workflows/airglow)
-[![Code Coverage](https://img.shields.io/codecov/c/github/adobe/airglow/master.svg?logo=codecov)](https://codecov.io/gh/adobe/airglow/branch/master) [![Greenkeeper badge](https://badges.greenkeeper.io/adobe/airglow.svg)](https://greenkeeper.io/)
+[![Code Coverage](https://img.shields.io/codecov/c/github/adobe/airglow/master.svg?logo=codecov)](https://codecov.io/gh/adobe/airglow/branch/master) 
 
 Airglow is a Javascript framework that provides a clean, simple wrapper over all your other favorite frameworks.
 

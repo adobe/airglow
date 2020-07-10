@@ -14,8 +14,12 @@ import * as R from 'ramda';
 import { hasColumn } from '../selectors/column.selectors';
 
 const sortPath = ['store', 'sort'];
+const defaultSortPath = ['construct', 'defaultSort'];
 
-const getSortState = state => R.path(sortPath, state);
+const getSortState = (state) => {
+  const sort = R.path(sortPath, state);
+  return sort || R.path(defaultSortPath, state);
+}
 
 const sortReducer = (state, { payload }) => {
   const sortState = getSortState(state);

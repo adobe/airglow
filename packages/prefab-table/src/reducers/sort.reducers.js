@@ -19,7 +19,7 @@ const defaultSortPath = ['construct', 'defaultSort'];
 const getSortState = (state) => {
   const sort = R.path(sortPath, state);
   return sort || R.path(defaultSortPath, state);
-}
+};
 
 const sortReducer = (state, { payload }) => {
   const sortState = getSortState(state);

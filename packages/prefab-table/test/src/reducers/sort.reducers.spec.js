@@ -51,6 +51,22 @@ const initState = {
   }
 };
 
+const defaultState = {
+  construct: {
+    columns: {
+      name: {},
+      color: {}
+    },
+    defaultSort: {
+      column: 'name',
+      order: 1
+    }
+  },
+  store: {
+  }
+};
+
+
 describe('sortReducer', () => {
   it('should ignore', function () {
     expect(sortReducer(initState, payload('type')))
@@ -58,6 +74,10 @@ describe('sortReducer', () => {
   });
   it('should set column and order to 1 from empty state', function () {
     expect(sortReducer(initState, payload('name')))
+      .toMatchSnapshot();
+  });
+  it('should use the default values', function () {
+    expect(sortReducer(defaultState, payload('name')))
       .toMatchSnapshot();
   });
   it('should toggle sort order for same column', function () {

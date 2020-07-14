@@ -64,3 +64,24 @@ Object {
   },
 }
 `;
+
+exports[`sortReducer should use the default values 1`] = `
+Object {
+  "construct": Object {
+    "columns": Object {
+      "color": Object {},
+      "name": Object {},
+    },
+    "defaultSort": Object {
+      "column": "name",
+      "order": 1,
+    },
+  },
+  "store": Object {
+    "sort": Object {
+      "column": "name",
+      "order": -1,
+    },
+  },
+}
+`;

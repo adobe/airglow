@@ -31,11 +31,13 @@ describe('PrefabTableIntegration', () => {
         dataSelector: () => [
           {
             container: 'beaker',
-            contents: 'vinegar'
+            contents: 'vinegar',
+            amount: 2
           },
           {
             container: 'test tube',
-            contents: 'baking soda'
+            contents: 'baking soda',
+            amount: 1
           }
         ],
         defaultSort: {
@@ -59,12 +61,27 @@ describe('PrefabTableIntegration', () => {
   });
 
   it('updates the selected row', () => {
-    store.dispatch(prefabs.testTable.toggleRowAction({ container: 'test tube', contents: 'baking soda' }));
+    store.dispatch(prefabs.testTable.toggleRowAction({ container: 'test tube', contents: 'baking soda', amount: 1 }));
     expect(prefabs.testTable.selectedData(store.getState())).toMatchObject([{ container: 'test tube', contents: 'baking soda' }]);
     expect(prefabs.testTable.state(store.getState()).selectedRows).toContain(0);
     prefabs.testTable.handlers(store.dispatch).onHeaderClick({}, 'container');
     expect(prefabs.testTable.state(store.getState()).selectedRows).toContain(1);
     store.dispatch(prefabs.testTable.deselectRowsAction());
     expect(prefabs.testTable.state(store.getState()).selectedRows.length).toBe(0);
+  });
+  it('adds and removes a column', () => {
+    store.dispatch(prefabs.testTable.addColumnAction('amount', { name: 'amount', sorter: 'default' }));
+    prefabs.testTable.handlers(store.dispatch).onHeaderClick({}, 'amount');
+    store.dispatch(prefabs.testTable.toggleRowAction({ container: 'beaker', contents: 'vinegar', amount: 2 }));
+    expect(prefabs.testTable.state(store.getState()).selectedRows).toContain(1);
+    store.dispatch(prefabs.testTable.removeColumnAction('amount'));
+    expect(prefabs.testTable.state(store.getState()).columns.amount).not.toBeDefined();
+  });
+  it('hides and shows columns', () => {
+    prefabs.testTable.handlers(store.dispatch).hideColumn('container');
+    store.dispatch(prefabs.testTable.toggleRowAction({ container: 'beaker', contents: 'vinegar', amount: 2 }));
+    expect(prefabs.testTable.state(store.getState()).hiddenColumns.container).toBeDefined();
+    prefabs.testTable.handlers(store.dispatch).showColumn('container');
+    expect(prefabs.testTable.state(store.getState()).hiddenColumns).toMatchObject({});
   });
 });

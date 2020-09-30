@@ -21,7 +21,12 @@ import {
   showColumn,
   toggleRow
 } from '../actions';
-import { selectHiddenColumns, selectVisibleColumns } from './column.selectors';
+import {
+  addedColumns,
+  defaultColumns,
+  selectHiddenColumns,
+  selectVisibleColumns
+} from './column.selectors';
 import columnSorter from '../util/column.sorter';
 
 const selectColumnSelector = (name, selector) =>
@@ -29,6 +34,13 @@ const selectColumnSelector = (name, selector) =>
     R.path(['prefab', name]),
     selector
   )(state);
+
+const selectColumnSorter = name => createSelector(
+  selectColumnSelector(name, defaultColumns),
+  selectColumnSelector(name, addedColumns),
+  selectSortColumn(name),
+  (columns, added, sortBy) => R.path([sortBy, 'sorter'], columns) || R.path([sortBy, 'sorter'], added)
+);
 
 const selectSortOrder = name => createSelector([
   state => R.path(['prefab', name, 'store', 'sort', 'order'], state),
@@ -40,8 +52,8 @@ const selectSortColumn = name => createSelector([
   state => R.path(['prefab', name, 'construct', 'defaultSort', 'column'], state)
 ], (storeColumn, defaultColumn) => storeColumn || defaultColumn);
 
-const selectSortedData = (data = [], sortBy, sortDirection, columns) =>
-  columnSorter(sortBy, sortDirection, R.path([sortBy, 'sorter'], columns), data);
+const selectSortedData = (data = [], sortBy, sortDirection, sorter) =>
+  columnSorter(sortBy, sortDirection, sorter, data);
 
 const selectedData = name =>
   state => R.pathOr([], ['prefab', name, 'store', 'selectedRows'], state);
@@ -51,7 +63,7 @@ const selectData = (name, dataSelector) => createSelector(
     dataSelector,
     selectSortColumn(name),
     selectSortOrder(name),
-    selectColumnSelector(name, selectVisibleColumns)
+    selectColumnSorter(name)
   ],
   selectSortedData
 );

@@ -14,32 +14,32 @@ import * as R from 'ramda';
 import { createSelector } from 'reselect';
 
 // Get the default columns
-const defaultColumnsPath = R.path(['construct', 'columns']);
+export const defaultColumns = R.path(['construct', 'columns']);
 
 // Get the added columns
-const addedColumnsPath = R.pathOr({}, ['store', 'addedColumns']);
+export const addedColumns = R.pathOr({}, ['store', 'addedColumns']);
 
 // Get the hidden columns
-const hiddenColumnsPath = R.pathOr([], ['store', 'hiddenColumns']);
+const hiddenColumns = R.pathOr([], ['store', 'hiddenColumns']);
 
 export const selectColumns = createSelector(
-  defaultColumnsPath,
-  addedColumnsPath,
-  (defaultColumns, addedColumns) => R.merge(addedColumns, defaultColumns)
+  defaultColumns,
+  addedColumns,
+  (columns, added) => R.merge(added, columns)
 );
 
 // Get the hidden columns
 export const selectHiddenColumns = createSelector(
   selectColumns,
-  hiddenColumnsPath,
-  (columns, hiddenColumns) => R.pick(hiddenColumns, columns)
+  hiddenColumns,
+  (columns, hidden) => R.pick(hidden, columns)
 );
 
 // Get the available columns
 export const selectVisibleColumns = createSelector(
   selectColumns,
-  hiddenColumnsPath,
-  (columns, hiddenColumns) => R.omit(hiddenColumns, columns)
+  hiddenColumns,
+  (columns, hidden) => R.omit(hidden, columns)
 );
 
 // Get the available columns

@@ -12,11 +12,16 @@ governing permissions and limitations under the License.
 
 import { call } from '@airglow/reducers';
 import * as T from '../actions';
+import { addColumnReducer, hideColumnReducer, removeColumnReducer, showColumnReducer } from './column.reducers';
 import { deselectRowsReducer, toggleRowReducer } from './row.reducers';
 import { sortReducer } from './sort.reducers';
 
 export default call(
+  call(addColumnReducer).for(T.ADD_COLUMN),
   call(deselectRowsReducer).for(T.DESELECT_ROWS),
+  call(hideColumnReducer).for(T.HIDE_COLUMN),
+  call(removeColumnReducer).for(T.REMOVE_COLUMN),
+  call(showColumnReducer).for(T.SHOW_COLUMN),
   call(sortReducer).for(T.DO_SORT),
   call(toggleRowReducer).for(T.TOGGLE_ROW)
 );

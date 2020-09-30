@@ -37,6 +37,6 @@ export default ({
   return { [name]: { ...selectorInternal } };
 };
 
-const processColumns = R.map(
-  column => columnPrefab(column)
+const processColumns = R.mapObjIndexed(
+  (column, name) => columnPrefab({ name, ...column })
 );

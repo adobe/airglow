@@ -17,8 +17,9 @@ const AirglowContext = React.createContext();
 export const AirglowProvider = AirglowContext.Provider;
 
 export class AirglowWrapper extends React.Component {
-  componentWillMount() {
-    this.context.bootstrap(this.props.config);
+  constructor(props, context) {
+    super(props, context);
+    context.bootstrap(props.config);
   }
 
   componentDidMount() {

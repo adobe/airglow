@@ -13,10 +13,10 @@ governing permissions and limitations under the License.
 /* eslint-disable no-console */
 
 import React from 'react';
-import { renderAirglow } from 'airglow';
 import ReactStore from '@airglow/store-react';
 import { call } from '@airglow/reducers';
 import plugin from '../../src/index';
+import { renderAirglow } from '../../../../test/util/test.utils';
 
 let originalInfo;
 const TestComponent = () => (

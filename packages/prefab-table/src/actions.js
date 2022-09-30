@@ -12,14 +12,30 @@ governing permissions and limitations under the License.
 
 import { createAction } from '@airglow/reducers';
 
+export const ADD_COLUMN           = 'ADD_COLUMN';
 export const DESELECT_ROWS        = 'TABLE_DESELECT_ROWS';
 export const DO_SORT              = 'TABLE_SORT';
+export const HIDE_COLUMN          = 'HIDE_COLUMN';
+export const REMOVE_COLUMN        = 'REMOVE_COLUMN';
+export const SHOW_COLUMN          = 'SHOW_COLUMN';
 export const TOGGLE_ROW           = 'TABLE_TOGGLE_ROW';
+
+export const addColumn = createAction(ADD_COLUMN,
+  (construct, column, config) => ({ construct, column, config }));
 
 export const deselectRows = createAction(DESELECT_ROWS,
   (construct, rows) => ({ construct, rows }));
 
 export const doSort = createAction(DO_SORT,
+  (construct, column) => ({ construct, column }));
+
+export const hideColumn = createAction(HIDE_COLUMN,
+  (construct, column) => ({ construct, column }));
+
+export const removeColumn = createAction(REMOVE_COLUMN,
+  (construct, column) => ({ construct, column }));
+
+export const showColumn = createAction(SHOW_COLUMN,
   (construct, column) => ({ construct, column }));
 
 export const toggleRow = createAction(TOGGLE_ROW,

@@ -1,7 +1,7 @@
 {
   "name": "@airglow/prefab-map",
   "description": "Prefabs for map implementations",
-  "version": "0.5.0",
+  "version": "0.8.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -16,8 +16,8 @@
     "dist/"
   ],
   "dependencies": {
-    "@airglow/prefab": "^0.5.0",
-    "@airglow/reducers": "^0.5.0"
+    "@airglow/prefab": "^0.8.0",
+    "@airglow/reducers": "^0.8.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4"
@@ -26,5 +26,6 @@
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "babel src --out-dir dist --root-mode upward"
   },
-  "main": "dist/index.js"
+  "main": "dist/index.js",
+  "gitHead": "737aea9026515c26fea95d0d3f7c3ffff4417211"
 }

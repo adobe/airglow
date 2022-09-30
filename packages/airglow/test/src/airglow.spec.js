@@ -17,7 +17,7 @@ import { mount, shallow } from 'enzyme';
 import Airglow from '../../src/airglow';
 import * as engine from '../../src/engine';
 import { COMPONENT, HOC } from '../../src/types';
-import { fakeStore } from '../../src/util/test.util';
+import { fakeStore } from '../../../../test/util/test.utils';
 
 let bootstrapSpy;
 let pluginSpy;

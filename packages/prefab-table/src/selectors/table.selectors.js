@@ -12,11 +12,35 @@ governing permissions and limitations under the License.
 
 import * as R from 'ramda';
 import { createSelector } from 'reselect';
-import { deselectRows, doSort, toggleRow } from '../actions';
+import {
+  addColumn,
+  deselectRows,
+  doSort,
+  hideColumn,
+  removeColumn,
+  showColumn,
+  toggleRow
+} from '../actions';
+import {
+  addedColumns,
+  defaultColumns,
+  selectHiddenColumns,
+  selectVisibleColumns
+} from './column.selectors';
 import columnSorter from '../util/column.sorter';
 
-const allColumns = name =>
-  state => R.path(['prefab', name, 'construct', 'columns'], state);
+const selectColumnSelector = (name, selector) =>
+  state => R.pipe(
+    R.path(['prefab', name]),
+    selector
+  )(state);
+
+const selectColumnSorter = name => createSelector(
+  selectColumnSelector(name, defaultColumns),
+  selectColumnSelector(name, addedColumns),
+  selectSortColumn(name),
+  (columns, added, sortBy) => R.path([sortBy, 'sorter'], columns) || R.path([sortBy, 'sorter'], added)
+);
 
 const selectSortOrder = name => createSelector([
   state => R.path(['prefab', name, 'store', 'sort', 'order'], state),
@@ -28,14 +52,19 @@ const selectSortColumn = name => createSelector([
   state => R.path(['prefab', name, 'construct', 'defaultSort', 'column'], state)
 ], (storeColumn, defaultColumn) => storeColumn || defaultColumn);
 
-const selectSortedData = (data = [], sortBy, sortDirection, columns) =>
-  columnSorter(sortBy, sortDirection, R.path([sortBy, 'sorter'], columns), data);
+const selectSortedData = (data = [], sortBy, sortDirection, sorter) =>
+  columnSorter(sortBy, sortDirection, sorter, data);
 
 const selectedData = name =>
   state => R.pathOr([], ['prefab', name, 'store', 'selectedRows'], state);
 
 const selectData = (name, dataSelector) => createSelector(
-  [dataSelector, selectSortColumn(name), selectSortOrder(name), allColumns(name)],
+  [
+    dataSelector,
+    selectSortColumn(name),
+    selectSortOrder(name),
+    selectColumnSorter(name)
+  ],
   selectSortedData
 );
 
@@ -45,14 +74,18 @@ const selectedRows = (name, dataSelector) => createSelector(
 );
 
 const makeState = (name, dataSelector) => createSelector([
+  selectColumnSelector(name, selectVisibleColumns),
   selectData(name, dataSelector),
+  selectColumnSelector(name, selectHiddenColumns),
   selectedData(name),
   selectedRows(name, dataSelector),
   selectSortColumn(name),
   selectSortOrder(name)
 ],
-(data, dataSelected, rowsSelected, sortBy, sortDirection) => ({
+(columns, data, hiddenColumns, dataSelected, rowsSelected, sortBy, sortDirection) => ({
+  columns,
   data,
+  hiddenColumns,
   selectedData: dataSelected,
   selectedRows: rowsSelected,
   sortBy,
@@ -60,13 +93,17 @@ const makeState = (name, dataSelector) => createSelector([
 }));
 
 const makeHandlers = name => dispatch => ({
+  hideColumn: columnName => dispatch(hideColumn(name, columnName)),
   onHeaderClick: (columnData, columnName) => dispatch(doSort(name, columnName)),
-  onRowClick: (row, index) => dispatch(toggleRow(name, row, index))
+  onRowClick: (row, index) => dispatch(toggleRow(name, row, index)),
+  showColumn: columnName => dispatch(showColumn(name, columnName))
 });
 
 export default (name, dataSelector) => ({
+  addColumnAction: (columnName, config) => addColumn(name, columnName, config),
   deselectRowsAction: () => deselectRows(name),
   handlers: makeHandlers(name),
+  removeColumnAction: columnName => removeColumn(name, columnName),
   selectedData: selectedData(name),
   state: makeState(name, dataSelector),
   toggleRowAction: (row, index) => toggleRow(name, row, index)

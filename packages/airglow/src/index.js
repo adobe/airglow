@@ -17,5 +17,3 @@ export default Airglow;
 export * from './types';
 
 export { AirglowProvider, AirglowWrapper };
-
-export * from './util/test.util';

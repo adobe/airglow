@@ -1,6 +1,6 @@
 {
   "name": "airglow",
-  "version": "0.6.0",
+  "version": "0.9.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/airglow.git",
@@ -29,5 +29,6 @@
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "babel src --out-dir dist --root-mode upward",
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "gitHead": "737aea9026515c26fea95d0d3f7c3ffff4417211"
 }

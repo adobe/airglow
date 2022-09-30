@@ -3,13 +3,16 @@
 exports[`tablePrefab should return the table 1`] = `
 Object {
   "fruits": Object {
+    "addColumnAction": [Function],
     "allowsMultipleSelection": true,
     "allowsSelection": true,
     "columns": Object {
       "color": Object {
+        "name": "color",
         "sorter": [Function],
       },
       "name": Object {
+        "name": "name",
         "sorter": [Function],
       },
     },
@@ -18,6 +21,7 @@ Object {
     "deselectRowsAction": [Function],
     "handlers": [Function],
     "reduce": [Function],
+    "removeColumnAction": [Function],
     "selectedData": [Function],
     "state": [Function],
     "tableName": "fruits",
